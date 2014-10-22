@@ -10,6 +10,5 @@
 
 @interface FlightsViewController : UIViewController
 
-
 @end
 
