@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		95A5BF0019F8312F000A3F41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BEFF19F8312F000A3F41 /* main.m */; };
+		95A5BF0319F8312F000A3F41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF0219F8312F000A3F41 /* AppDelegate.m */; };
+		95A5BF0619F8312F000A3F41 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF0519F8312F000A3F41 /* FirstViewController.m */; };
+		95A5BF0919F8312F000A3F41 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF0819F8312F000A3F41 /* SecondViewController.m */; };
+		95A5BF0C19F8312F000A3F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A5BF0A19F8312F000A3F41 /* Main.storyboard */; };
+		95A5BF0E19F8312F000A3F41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95A5BF0D19F8312F000A3F41 /* Images.xcassets */; };
+		95A5BF1119F8312F000A3F41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95A5BF0F19F8312F000A3F41 /* LaunchScreen.xib */; };
+		95A5BF1D19F83130000A3F41 /* FlyWhizzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF1C19F83130000A3F41 /* FlyWhizzTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95A5BF1719F83130000A3F41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95A5BEF219F8312F000A3F41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95A5BEF919F8312F000A3F41;
+			remoteInfo = FlyWhizz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		95A5BEFA19F8312F000A3F41 /* FlyWhizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyWhizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95A5BEFE19F8312F000A3F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95A5BEFF19F8312F000A3F41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		95A5BF0119F8312F000A3F41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		95A5BF0219F8312F000A3F41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		95A5BF0419F8312F000A3F41 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		95A5BF0519F8312F000A3F41 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		95A5BF0719F8312F000A3F41 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		95A5BF0819F8312F000A3F41 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		95A5BF0B19F8312F000A3F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		95A5BF0D19F8312F000A3F41 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		95A5BF1019F8312F000A3F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		95A5BF1619F83130000A3F41 /* FlyWhizzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyWhizzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95A5BF1B19F83130000A3F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95A5BF1C19F83130000A3F41 /* FlyWhizzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyWhizzTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95A5BEF719F8312F000A3F41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95A5BF1319F83130000A3F41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95A5BEF119F8312F000A3F41 = {
+			isa = PBXGroup;
+			children = (
+				95A5BEFC19F8312F000A3F41 /* FlyWhizz */,
+				95A5BF1919F83130000A3F41 /* FlyWhizzTests */,
+				95A5BEFB19F8312F000A3F41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95A5BEFB19F8312F000A3F41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95A5BEFA19F8312F000A3F41 /* FlyWhizz.app */,
+				95A5BF1619F83130000A3F41 /* FlyWhizzTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95A5BEFC19F8312F000A3F41 /* FlyWhizz */ = {
+			isa = PBXGroup;
+			children = (
+				95A5BF0119F8312F000A3F41 /* AppDelegate.h */,
+				95A5BF0219F8312F000A3F41 /* AppDelegate.m */,
+				95A5BF0419F8312F000A3F41 /* FirstViewController.h */,
+				95A5BF0519F8312F000A3F41 /* FirstViewController.m */,
+				95A5BF0719F8312F000A3F41 /* SecondViewController.h */,
+				95A5BF0819F8312F000A3F41 /* SecondViewController.m */,
+				95A5BF0A19F8312F000A3F41 /* Main.storyboard */,
+				95A5BF0D19F8312F000A3F41 /* Images.xcassets */,
+				95A5BF0F19F8312F000A3F41 /* LaunchScreen.xib */,
+				95A5BEFD19F8312F000A3F41 /* Supporting Files */,
+			);
+			path = FlyWhizz;
+			sourceTree = "<group>";
+		};
+		95A5BEFD19F8312F000A3F41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				95A5BEFE19F8312F000A3F41 /* Info.plist */,
+				95A5BEFF19F8312F000A3F41 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		95A5BF1919F83130000A3F41 /* FlyWhizzTests */ = {
+			isa = PBXGroup;
+			children = (
+				95A5BF1C19F83130000A3F41 /* FlyWhizzTests.m */,
+				95A5BF1A19F83130000A3F41 /* Supporting Files */,
+			);
+			path = FlyWhizzTests;
+			sourceTree = "<group>";
+		};
+		95A5BF1A19F83130000A3F41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				95A5BF1B19F83130000A3F41 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95A5BEF919F8312F000A3F41 /* FlyWhizz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95A5BF2019F83130000A3F41 /* Build configuration list for PBXNativeTarget "FlyWhizz" */;
+			buildPhases = (
+				95A5BEF619F8312F000A3F41 /* Sources */,
+				95A5BEF719F8312F000A3F41 /* Frameworks */,
+				95A5BEF819F8312F000A3F41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlyWhizz;
+			productName = FlyWhizz;
+			productReference = 95A5BEFA19F8312F000A3F41 /* FlyWhizz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95A5BF1519F83130000A3F41 /* FlyWhizzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95A5BF2319F83130000A3F41 /* Build configuration list for PBXNativeTarget "FlyWhizzTests" */;
+			buildPhases = (
+				95A5BF1219F83130000A3F41 /* Sources */,
+				95A5BF1319F83130000A3F41 /* Frameworks */,
+				95A5BF1419F83130000A3F41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95A5BF1819F83130000A3F41 /* PBXTargetDependency */,
+			);
+			name = FlyWhizzTests;
+			productName = FlyWhizzTests;
+			productReference = 95A5BF1619F83130000A3F41 /* FlyWhizzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95A5BEF219F8312F000A3F41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "ASU CSE 494";
+				TargetAttributes = {
+					95A5BEF919F8312F000A3F41 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					95A5BF1519F83130000A3F41 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 95A5BEF919F8312F000A3F41;
+					};
+				};
+			};
+			buildConfigurationList = 95A5BEF519F8312F000A3F41 /* Build configuration list for PBXProject "FlyWhizz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95A5BEF119F8312F000A3F41;
+			productRefGroup = 95A5BEFB19F8312F000A3F41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95A5BEF919F8312F000A3F41 /* FlyWhizz */,
+				95A5BF1519F83130000A3F41 /* FlyWhizzTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95A5BEF819F8312F000A3F41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A5BF0C19F8312F000A3F41 /* Main.storyboard in Resources */,
+				95A5BF1119F8312F000A3F41 /* LaunchScreen.xib in Resources */,
+				95A5BF0E19F8312F000A3F41 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95A5BF1419F83130000A3F41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95A5BEF619F8312F000A3F41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A5BF0919F8312F000A3F41 /* SecondViewController.m in Sources */,
+				95A5BF0319F8312F000A3F41 /* AppDelegate.m in Sources */,
+				95A5BF0619F8312F000A3F41 /* FirstViewController.m in Sources */,
+				95A5BF0019F8312F000A3F41 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95A5BF1219F83130000A3F41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A5BF1D19F83130000A3F41 /* FlyWhizzTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95A5BF1819F83130000A3F41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95A5BEF919F8312F000A3F41 /* FlyWhizz */;
+			targetProxy = 95A5BF1719F83130000A3F41 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		95A5BF0A19F8312F000A3F41 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95A5BF0B19F8312F000A3F41 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		95A5BF0F19F8312F000A3F41 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95A5BF1019F8312F000A3F41 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95A5BF1E19F83130000A3F41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		95A5BF1F19F83130000A3F41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95A5BF2119F83130000A3F41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FlyWhizz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		95A5BF2219F83130000A3F41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FlyWhizz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		95A5BF2419F83130000A3F41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlyWhizzTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlyWhizz.app/FlyWhizz";
+			};
+			name = Debug;
+		};
+		95A5BF2519F83130000A3F41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlyWhizzTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlyWhizz.app/FlyWhizz";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95A5BEF519F8312F000A3F41 /* Build configuration list for PBXProject "FlyWhizz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95A5BF1E19F83130000A3F41 /* Debug */,
+				95A5BF1F19F83130000A3F41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95A5BF2019F83130000A3F41 /* Build configuration list for PBXNativeTarget "FlyWhizz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95A5BF2119F83130000A3F41 /* Debug */,
+				95A5BF2219F83130000A3F41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		95A5BF2319F83130000A3F41 /* Build configuration list for PBXNativeTarget "FlyWhizzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95A5BF2419F83130000A3F41 /* Debug */,
+				95A5BF2519F83130000A3F41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 95A5BEF219F8312F000A3F41 /* Project object */;
+}
