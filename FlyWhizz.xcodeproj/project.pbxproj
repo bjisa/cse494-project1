@@ -17,6 +17,8 @@
 		95A5BF1D19F83130000A3F41 /* FlyWhizzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF1C19F83130000A3F41 /* FlyWhizzTests.m */; };
 		95DBF70519F84A440009D432 /* AirlinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DBF70419F84A440009D432 /* AirlinesViewController.m */; };
 		95DBF70819F84A4D0009D432 /* ReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DBF70719F84A4D0009D432 /* ReviewsViewController.m */; };
+		E508659519F8489400584125 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E508659419F8489400584125 /* Constants.m */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		95DBF70419F84A440009D432 /* AirlinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirlinesViewController.m; sourceTree = "<group>"; };
 		95DBF70619F84A4D0009D432 /* ReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsViewController.h; sourceTree = "<group>"; };
 		95DBF70719F84A4D0009D432 /* ReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsViewController.m; sourceTree = "<group>"; };
+		E508659319F8489400584125 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		E508659419F8489400584125 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +101,7 @@
 				95A5BF0519F8312F000A3F41 /* FlightsViewController.m */,
 				95A5BF0719F8312F000A3F41 /* PlanesViewController.h */,
 				95A5BF0819F8312F000A3F41 /* PlanesViewController.m */,
+				E508659619F8489F00584125 /* ViewControllers */,
 				95A5BF0A19F8312F000A3F41 /* Main.storyboard */,
 				95DBF70319F84A440009D432 /* AirlinesViewController.h */,
 				95DBF70419F84A440009D432 /* AirlinesViewController.m */,
@@ -104,6 +110,7 @@
 				95A5BF0D19F8312F000A3F41 /* Images.xcassets */,
 				95A5BF0F19F8312F000A3F41 /* LaunchScreen.xib */,
 				95A5BEFD19F8312F000A3F41 /* Supporting Files */,
+				E508659219F8485800584125 /* FlyWhizz Models */,
 			);
 			path = FlyWhizz;
 			sourceTree = "<group>";
@@ -132,6 +139,27 @@
 				95A5BF1B19F83130000A3F41 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E508659219F8485800584125 /* FlyWhizz Models */ = {
+			isa = PBXGroup;
+			children = (
+				E508659319F8489400584125 /* Constants.h */,
+				E508659419F8489400584125 /* Constants.m */,
+			);
+			name = "FlyWhizz Models";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E508659619F8489F00584125 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				95A5BF0419F8312F000A3F41 /* FirstViewController.h */,
+				95A5BF0519F8312F000A3F41 /* FirstViewController.m */,
+				95A5BF0719F8312F000A3F41 /* SecondViewController.h */,
+				95A5BF0819F8312F000A3F41 /* SecondViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				95A5BF0919F8312F000A3F41 /* PlanesViewController.m in Sources */,
+				E508659519F8489400584125 /* Constants.m in Sources */,
+				95A5BF0919F8312F000A3F41 /* SecondViewController.m in Sources */,
 				95A5BF0319F8312F000A3F41 /* AppDelegate.m in Sources */,
 				95DBF70819F84A4D0009D432 /* ReviewsViewController.m in Sources */,
 				95DBF70519F84A440009D432 /* AirlinesViewController.m in Sources */,
