@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		95A5BF0019F8312F000A3F41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BEFF19F8312F000A3F41 /* main.m */; };
 		95A5BF0319F8312F000A3F41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF0219F8312F000A3F41 /* AppDelegate.m */; };
-		95A5BF0619F8312F000A3F41 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF0519F8312F000A3F41 /* FirstViewController.m */; };
-		95A5BF0919F8312F000A3F41 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF0819F8312F000A3F41 /* SecondViewController.m */; };
+		95A5BF0619F8312F000A3F41 /* FlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF0519F8312F000A3F41 /* FlightsViewController.m */; };
+		95A5BF0919F8312F000A3F41 /* PlanesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF0819F8312F000A3F41 /* PlanesViewController.m */; };
 		95A5BF0C19F8312F000A3F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A5BF0A19F8312F000A3F41 /* Main.storyboard */; };
 		95A5BF0E19F8312F000A3F41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95A5BF0D19F8312F000A3F41 /* Images.xcassets */; };
 		95A5BF1119F8312F000A3F41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95A5BF0F19F8312F000A3F41 /* LaunchScreen.xib */; };
 		95A5BF1D19F83130000A3F41 /* FlyWhizzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF1C19F83130000A3F41 /* FlyWhizzTests.m */; };
+		95DBF70519F84A440009D432 /* AirlinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DBF70419F84A440009D432 /* AirlinesViewController.m */; };
+		95DBF70819F84A4D0009D432 /* ReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DBF70719F84A4D0009D432 /* ReviewsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,16 +35,20 @@
 		95A5BEFF19F8312F000A3F41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		95A5BF0119F8312F000A3F41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		95A5BF0219F8312F000A3F41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		95A5BF0419F8312F000A3F41 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		95A5BF0519F8312F000A3F41 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		95A5BF0719F8312F000A3F41 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		95A5BF0819F8312F000A3F41 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		95A5BF0419F8312F000A3F41 /* FlightsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlightsViewController.h; sourceTree = "<group>"; };
+		95A5BF0519F8312F000A3F41 /* FlightsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlightsViewController.m; sourceTree = "<group>"; };
+		95A5BF0719F8312F000A3F41 /* PlanesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanesViewController.h; sourceTree = "<group>"; };
+		95A5BF0819F8312F000A3F41 /* PlanesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanesViewController.m; sourceTree = "<group>"; };
 		95A5BF0B19F8312F000A3F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95A5BF0D19F8312F000A3F41 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		95A5BF1019F8312F000A3F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		95A5BF1619F83130000A3F41 /* FlyWhizzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyWhizzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A5BF1B19F83130000A3F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95A5BF1C19F83130000A3F41 /* FlyWhizzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyWhizzTests.m; sourceTree = "<group>"; };
+		95DBF70319F84A440009D432 /* AirlinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirlinesViewController.h; sourceTree = "<group>"; };
+		95DBF70419F84A440009D432 /* AirlinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirlinesViewController.m; sourceTree = "<group>"; };
+		95DBF70619F84A4D0009D432 /* ReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsViewController.h; sourceTree = "<group>"; };
+		95DBF70719F84A4D0009D432 /* ReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +92,15 @@
 			children = (
 				95A5BF0119F8312F000A3F41 /* AppDelegate.h */,
 				95A5BF0219F8312F000A3F41 /* AppDelegate.m */,
-				95A5BF0419F8312F000A3F41 /* FirstViewController.h */,
-				95A5BF0519F8312F000A3F41 /* FirstViewController.m */,
-				95A5BF0719F8312F000A3F41 /* SecondViewController.h */,
-				95A5BF0819F8312F000A3F41 /* SecondViewController.m */,
+				95A5BF0419F8312F000A3F41 /* FlightsViewController.h */,
+				95A5BF0519F8312F000A3F41 /* FlightsViewController.m */,
+				95A5BF0719F8312F000A3F41 /* PlanesViewController.h */,
+				95A5BF0819F8312F000A3F41 /* PlanesViewController.m */,
 				95A5BF0A19F8312F000A3F41 /* Main.storyboard */,
+				95DBF70319F84A440009D432 /* AirlinesViewController.h */,
+				95DBF70419F84A440009D432 /* AirlinesViewController.m */,
+				95DBF70619F84A4D0009D432 /* ReviewsViewController.h */,
+				95DBF70719F84A4D0009D432 /* ReviewsViewController.m */,
 				95A5BF0D19F8312F000A3F41 /* Images.xcassets */,
 				95A5BF0F19F8312F000A3F41 /* LaunchScreen.xib */,
 				95A5BEFD19F8312F000A3F41 /* Supporting Files */,
@@ -224,9 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95A5BF0919F8312F000A3F41 /* SecondViewController.m in Sources */,
+				95A5BF0919F8312F000A3F41 /* PlanesViewController.m in Sources */,
 				95A5BF0319F8312F000A3F41 /* AppDelegate.m in Sources */,
-				95A5BF0619F8312F000A3F41 /* FirstViewController.m in Sources */,
+				95DBF70819F84A4D0009D432 /* ReviewsViewController.m in Sources */,
+				95DBF70519F84A440009D432 /* AirlinesViewController.m in Sources */,
+				95A5BF0619F8312F000A3F41 /* FlightsViewController.m in Sources */,
 				95A5BF0019F8312F000A3F41 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +430,7 @@
 				95A5BF2219F83130000A3F41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95A5BF2319F83130000A3F41 /* Build configuration list for PBXNativeTarget "FlyWhizzTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +439,7 @@
 				95A5BF2519F83130000A3F41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

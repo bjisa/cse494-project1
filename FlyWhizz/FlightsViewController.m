@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 ASU CSE 494. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "FlightsViewController.h"
 
-@interface FirstViewController ()
+@interface FlightsViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation FlightsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
