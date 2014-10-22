@@ -15,6 +15,7 @@
 		95A5BF0E19F8312F000A3F41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95A5BF0D19F8312F000A3F41 /* Images.xcassets */; };
 		95A5BF1119F8312F000A3F41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95A5BF0F19F8312F000A3F41 /* LaunchScreen.xib */; };
 		95A5BF1D19F83130000A3F41 /* FlyWhizzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF1C19F83130000A3F41 /* FlyWhizzTests.m */; };
+		E508659519F8489400584125 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E508659419F8489400584125 /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		95A5BF1619F83130000A3F41 /* FlyWhizzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyWhizzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A5BF1B19F83130000A3F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95A5BF1C19F83130000A3F41 /* FlyWhizzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyWhizzTests.m; sourceTree = "<group>"; };
+		E508659319F8489400584125 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		E508659419F8489400584125 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,14 +89,12 @@
 			children = (
 				95A5BF0119F8312F000A3F41 /* AppDelegate.h */,
 				95A5BF0219F8312F000A3F41 /* AppDelegate.m */,
-				95A5BF0419F8312F000A3F41 /* FirstViewController.h */,
-				95A5BF0519F8312F000A3F41 /* FirstViewController.m */,
-				95A5BF0719F8312F000A3F41 /* SecondViewController.h */,
-				95A5BF0819F8312F000A3F41 /* SecondViewController.m */,
+				E508659619F8489F00584125 /* ViewControllers */,
 				95A5BF0A19F8312F000A3F41 /* Main.storyboard */,
 				95A5BF0D19F8312F000A3F41 /* Images.xcassets */,
 				95A5BF0F19F8312F000A3F41 /* LaunchScreen.xib */,
 				95A5BEFD19F8312F000A3F41 /* Supporting Files */,
+				E508659219F8485800584125 /* FlyWhizz Models */,
 			);
 			path = FlyWhizz;
 			sourceTree = "<group>";
@@ -122,6 +123,27 @@
 				95A5BF1B19F83130000A3F41 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E508659219F8485800584125 /* FlyWhizz Models */ = {
+			isa = PBXGroup;
+			children = (
+				E508659319F8489400584125 /* Constants.h */,
+				E508659419F8489400584125 /* Constants.m */,
+			);
+			name = "FlyWhizz Models";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E508659619F8489F00584125 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				95A5BF0419F8312F000A3F41 /* FirstViewController.h */,
+				95A5BF0519F8312F000A3F41 /* FirstViewController.m */,
+				95A5BF0719F8312F000A3F41 /* SecondViewController.h */,
+				95A5BF0819F8312F000A3F41 /* SecondViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E508659519F8489400584125 /* Constants.m in Sources */,
 				95A5BF0919F8312F000A3F41 /* SecondViewController.m in Sources */,
 				95A5BF0319F8312F000A3F41 /* AppDelegate.m in Sources */,
 				95A5BF0619F8312F000A3F41 /* FirstViewController.m in Sources */,
@@ -418,6 +441,7 @@
 				95A5BF2219F83130000A3F41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95A5BF2319F83130000A3F41 /* Build configuration list for PBXNativeTarget "FlyWhizzTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +450,7 @@
 				95A5BF2519F83130000A3F41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
