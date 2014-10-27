@@ -10,6 +10,7 @@
 
 @interface Constants : NSObject
 
+extern NSString *const apiID;
 extern NSString *const apiKey;
 
 @end
