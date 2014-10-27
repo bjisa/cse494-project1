@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  ReviewsViewController.h
 //  FlyWhizz
 //
 //  Created by Ben Jisa on 10/22/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface ReviewsViewController : UIViewController
 
 @end
-

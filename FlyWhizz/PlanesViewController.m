@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 ASU CSE 494. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "PlanesViewController.h"
 
-@interface SecondViewController ()
+@interface PlanesViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation PlanesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

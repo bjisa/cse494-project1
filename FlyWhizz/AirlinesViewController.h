@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  AirlinesViewController.h
 //  FlyWhizz
 //
 //  Created by Ben Jisa on 10/22/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
-
+@interface AirlinesViewController : UIViewController
 
 @end
-
