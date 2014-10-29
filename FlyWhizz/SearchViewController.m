@@ -16,10 +16,12 @@
         case 0:
             self.carrierInput.placeholder = @"Carrier";
             self.flightNumInput.placeholder = @"Flight Number";
+            self.searchType = @"byFlightNum";
             break;
         case 1:
             self.carrierInput.placeholder = @"Origin";
             self.flightNumInput.placeholder = @"Destination";
+            self.searchType = @"byOriginDestination";
             break;
         default: 
             break; 
@@ -32,6 +34,7 @@
     
     self.carrierInput.placeholder = @"Carrier";
     self.flightNumInput.placeholder = @"Flight Number";
+    self.searchType = @"byFlightNum";
 }
 
 - (void)didReceiveMemoryWarning {

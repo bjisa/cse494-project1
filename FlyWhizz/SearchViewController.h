@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *carrierInput;
 @property (weak, nonatomic) IBOutlet UITextField *flightNumInput;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *searchTypeSelector;
+@property NSString *searchType;
 
 @end
