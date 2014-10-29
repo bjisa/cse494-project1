@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06FD16BE1A00C6AF00776C05 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FD16BD1A00C6AF00776C05 /* MapKit.framework */; };
 		95A5BF0019F8312F000A3F41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BEFF19F8312F000A3F41 /* main.m */; };
 		95A5BF0319F8312F000A3F41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF0219F8312F000A3F41 /* AppDelegate.m */; };
 		95A5BF0619F8312F000A3F41 /* FlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF0519F8312F000A3F41 /* FlightsViewController.m */; };
@@ -18,7 +19,6 @@
 		95DBF70519F84A440009D432 /* AirlinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DBF70419F84A440009D432 /* AirlinesViewController.m */; };
 		95DBF70819F84A4D0009D432 /* ReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DBF70719F84A4D0009D432 /* ReviewsViewController.m */; };
 		E508659519F8489400584125 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E508659419F8489400584125 /* Constants.m */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06FD16BD1A00C6AF00776C05 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		95A5BEFA19F8312F000A3F41 /* FlyWhizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyWhizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A5BEFE19F8312F000A3F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95A5BEFF19F8312F000A3F41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		95DBF70719F84A4D0009D432 /* ReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsViewController.m; sourceTree = "<group>"; };
 		E508659319F8489400584125 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		E508659419F8489400584125 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06FD16BE1A00C6AF00776C05 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +78,7 @@
 		95A5BEF119F8312F000A3F41 = {
 			isa = PBXGroup;
 			children = (
+				06FD16BD1A00C6AF00776C05 /* MapKit.framework */,
 				95A5BEFC19F8312F000A3F41 /* FlyWhizz */,
 				95A5BF1919F83130000A3F41 /* FlyWhizzTests */,
 				95A5BEFB19F8312F000A3F41 /* Products */,
@@ -154,10 +156,6 @@
 		E508659619F8489F00584125 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				95A5BF0419F8312F000A3F41 /* FirstViewController.h */,
-				95A5BF0519F8312F000A3F41 /* FirstViewController.m */,
-				95A5BF0719F8312F000A3F41 /* SecondViewController.h */,
-				95A5BF0819F8312F000A3F41 /* SecondViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -211,6 +209,11 @@
 				TargetAttributes = {
 					95A5BEF919F8312F000A3F41 = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					95A5BF1519F83130000A3F41 = {
 						CreatedOnToolsVersion = 6.1;
@@ -264,7 +267,7 @@
 			files = (
 				95A5BF0919F8312F000A3F41 /* PlanesViewController.m in Sources */,
 				E508659519F8489400584125 /* Constants.m in Sources */,
-				95A5BF0919F8312F000A3F41 /* SecondViewController.m in Sources */,
+				95A5BF0919F8312F000A3F41 /* PlanesViewController.m in Sources */,
 				95A5BF0319F8312F000A3F41 /* AppDelegate.m in Sources */,
 				95DBF70819F84A4D0009D432 /* ReviewsViewController.m in Sources */,
 				95DBF70519F84A440009D432 /* AirlinesViewController.m in Sources */,
@@ -394,6 +397,7 @@
 				INFOPLIST_FILE = FlyWhizz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -404,6 +408,7 @@
 				INFOPLIST_FILE = FlyWhizz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
