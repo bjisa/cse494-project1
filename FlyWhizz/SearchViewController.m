@@ -76,8 +76,8 @@
     }
     else // Search by Flight Number
     {
-        dest.flightNumber = self.input1.text;
-        dest.carrier = self.input2.text;
+        dest.flightNumber = self.input2.text;
+        dest.carrier = self.input1.text;
     }
     
 }

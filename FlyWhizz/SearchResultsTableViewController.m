@@ -37,13 +37,13 @@
     if ([self.dateSelection isEqualToString:@"Tomorrow"])
     {
         // Get date for tomorrow
-        int incrementBy = 1;
-        NSDate * theDate = [[NSDate alloc] initWithTimeIntervalSinceNow:60 * 60 * 24 * incrementBy];
+        //int incrementBy = 1;
+        //NSDate * theDate = [[NSDate alloc] initWithTimeIntervalSinceNow:60 * 60 * 24 * incrementBy];
     }
     
-    int year = theDate.year;
-    int month = theDate.month;
-    int day = theDate.day;
+    int year = (int)theDate.year;
+    int month = (int)theDate.month;
+    int day = (int)theDate.day;
     
     NSString * queryString;
     
@@ -53,9 +53,7 @@
     }
     else // Search by Flight Number
     {
-        queryString = [NSString stringWithFormat:@"%@route/status/%@/%@/arr/%d/%d/%d?appId=%@&appKey=%@&utc=false&maxFlights=2",kBaseURL, self.originCode, self.destinationCode, year, month, day, apiID, apiKey];
-        
-        // Not implemented yet.
+        queryString = [NSString stringWithFormat:@"%@flight/status/%@/%@/arr/%d/%d/%d?appId=%@&appKey=%@&utc=false",kBaseURL, self.carrier, self.flightNumber, year, month, day, apiID, apiKey];
     }
     
     NSData *flightsQuery = [NSData dataWithContentsOfURL:[NSURL URLWithString:queryString]];
