@@ -9,6 +9,8 @@
 #import "FlightsViewController.h"
 
 @interface FlightsViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *carrierInput;
+@property (weak, nonatomic) IBOutlet UITextField *flightNumInput;
 
 @end
 
@@ -17,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.carrierInput.placeholder = @"Carrier";
+    self.flightNumInput.placeholder = @"Flight Number";
 }
 
 - (void)didReceiveMemoryWarning {
