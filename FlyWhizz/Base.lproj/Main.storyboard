@@ -152,7 +152,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="5x7-Vx-Kj9" detailTextLabel="gnW-ys-IId" style="IBUITableViewCellStyleSubtitle" id="gaE-ab-UHm">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="5x7-Vx-Kj9" detailTextLabel="gnW-ys-IId" style="IBUITableViewCellStyleSubtitle" id="gaE-ab-UHm">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gaE-ab-UHm" id="CnD-h4-NOV">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -171,6 +171,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="zDM-Tm-SqK" kind="push" id="6EW-2P-ja2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

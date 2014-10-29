@@ -32,11 +32,18 @@
 -(void) getFlightResults
 {
     // Get date for today
-    NSDateComponents *todayDate = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+    NSDateComponents *theDate = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
     
-    int year = todayDate.year;
-    int month = todayDate.month;
-    int day = todayDate.day;
+    if ([self.dateSelection isEqualToString:@"Tomorrow"])
+    {
+        // Get date for tomorrow
+        int incrementBy = 1;
+        NSDate * theDate = [[NSDate alloc] initWithTimeIntervalSinceNow:60 * 60 * 24 * incrementBy];
+    }
+    
+    int year = theDate.year;
+    int month = theDate.month;
+    int day = theDate.day;
     
     NSString * queryString;
     
@@ -62,25 +69,7 @@
         [self.flights2 addObject:thisFlight];
     }
     
-    //NSDictionary *flight1 = self.flights2[0];
-    
-//    int totalMovies = ((NSNumber *)movies[@"total"]).integerValue;
-//    int queriesRequired = ceil(totalMovies/50.0);
-//    
-//    for (int i = 0; i < queriesRequired; i++) {
-//        queryString = [NSString stringWithFormat:@"%@?page_limit=1&page=%d&country=us&apikey=%@",kMovieBaseURL,i,kTomatoesAPIKEY];
-//        
-//        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:queryString]];
-//        
-//        [self processData:data];
-//    }
-//    
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [self.tableView reloadData];
-//    });
-    
 }
-
 
 #pragma mark - TableViewDelegation
 
@@ -96,10 +85,11 @@
     FlightModel *flight = self.flights2[indexPath.row];
     
     NSString * flightNum = flight.flightNumber;
-    NSString * carrierCode = flight.airline;
+    NSString * times = [NSString stringWithFormat:@"Arr: %@ DepL %@", flight.arrivalDate, flight.departureDate];
     
     cell.textLabel.text = flightNum;
-    cell.detailTextLabel.text = carrierCode;
+    cell.detailTextLabel.text = times;
+    [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
     
     return cell;
     

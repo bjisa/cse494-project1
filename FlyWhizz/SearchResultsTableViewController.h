@@ -17,5 +17,6 @@
 @property NSString *flightNumber;
 @property NSString *carrier;
 @property NSString *searchType;
+@property NSString *dateSelection;
 
 @end

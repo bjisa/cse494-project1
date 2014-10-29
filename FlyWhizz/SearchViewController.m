@@ -67,6 +67,7 @@
     SearchResultsTableViewController * dest = segue.destinationViewController;
     
     dest.searchType = self.searchType;
+    dest.dateSelection = self.dateSelection;
     
     if ([self.searchType isEqualToString:@"byOriginDestination"])
     {
