@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		95995E4B19FEF91E000B4052 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95995E4A19FEF91E000B4052 /* SearchViewController.m */; };
+		95A5BE2D1A01855300B22192 /* SearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BE2C1A01855300B22192 /* SearchResultsTableViewController.m */; };
+		95A5BE301A019A2400B22192 /* FlightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BE2E1A019A2400B22192 /* FlightModel.m */; };
 		95A5BF0019F8312F000A3F41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BEFF19F8312F000A3F41 /* main.m */; };
 		95A5BF0319F8312F000A3F41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF0219F8312F000A3F41 /* AppDelegate.m */; };
 		95A5BF0619F8312F000A3F41 /* FlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF0519F8312F000A3F41 /* FlightsViewController.m */; };
@@ -33,6 +35,10 @@
 /* Begin PBXFileReference section */
 		95995E4919FEF91E000B4052 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		95995E4A19FEF91E000B4052 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		95A5BE2B1A01855300B22192 /* SearchResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewController.h; sourceTree = "<group>"; };
+		95A5BE2C1A01855300B22192 /* SearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewController.m; sourceTree = "<group>"; };
+		95A5BE2E1A019A2400B22192 /* FlightModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightModel.m; sourceTree = "<group>"; };
+		95A5BE2F1A019A2400B22192 /* FlightModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightModel.h; sourceTree = "<group>"; };
 		95A5BEFA19F8312F000A3F41 /* FlyWhizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyWhizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A5BEFE19F8312F000A3F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95A5BEFF19F8312F000A3F41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -144,6 +150,8 @@
 		E508659219F8485800584125 /* FlyWhizz Models */ = {
 			isa = PBXGroup;
 			children = (
+				95A5BE2E1A019A2400B22192 /* FlightModel.m */,
+				95A5BE2F1A019A2400B22192 /* FlightModel.h */,
 				E508659319F8489400584125 /* Constants.h */,
 				E508659419F8489400584125 /* Constants.m */,
 			);
@@ -154,6 +162,8 @@
 		E508659619F8489F00584125 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				95A5BE2B1A01855300B22192 /* SearchResultsTableViewController.h */,
+				95A5BE2C1A01855300B22192 /* SearchResultsTableViewController.m */,
 				95995E4919FEF91E000B4052 /* SearchViewController.h */,
 				95995E4A19FEF91E000B4052 /* SearchViewController.m */,
 			);
@@ -264,6 +274,8 @@
 				95A5BF0319F8312F000A3F41 /* AppDelegate.m in Sources */,
 				95DBF70819F84A4D0009D432 /* ReviewsViewController.m in Sources */,
 				95DBF70519F84A440009D432 /* AirlinesViewController.m in Sources */,
+				95A5BE2D1A01855300B22192 /* SearchResultsTableViewController.m in Sources */,
+				95A5BE301A019A2400B22192 /* FlightModel.m in Sources */,
 				95A5BF0619F8312F000A3F41 /* FlightsViewController.m in Sources */,
 				95A5BF0019F8312F000A3F41 /* main.m in Sources */,
 				95995E4B19FEF91E000B4052 /* SearchViewController.m in Sources */,

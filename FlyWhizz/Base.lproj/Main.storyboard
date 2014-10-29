@@ -104,9 +104,6 @@
                                 <rect key="frame" x="16" y="108" width="140" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="carrierInput:" destination="oda-hd-2kJ" eventType="editingDidEnd" id="mbr-gu-yq1"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9s2-oB-YtU">
                                 <rect key="frame" x="164" y="108" width="140" height="30"/>
@@ -119,6 +116,9 @@
                                     <segment title="Today"/>
                                     <segment title="Tomorrow"/>
                                 </segments>
+                                <connections>
+                                    <action selector="datePicker:" destination="oda-hd-2kJ" eventType="valueChanged" id="oS0-MK-j6k"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJV-8F-N6Y">
                                 <rect key="frame" x="137" y="182" width="48" height="30"/>
@@ -126,7 +126,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zDM-Tm-SqK" kind="push" id="iph-L9-r4e"/>
+                                    <segue destination="vwd-f1-oaL" kind="push" id="O8B-Gd-pOV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -134,14 +134,55 @@
                     </view>
                     <navigationItem key="navigationItem" title="Flight Search" id="Weo-pB-8nZ"/>
                     <connections>
-                        <outlet property="carrierInput" destination="fzT-RO-Z7o" id="SS8-DX-SX2"/>
-                        <outlet property="flightNumInput" destination="9s2-oB-YtU" id="MwV-1M-wef"/>
+                        <outlet property="input1" destination="fzT-RO-Z7o" id="v1s-rD-qlC"/>
+                        <outlet property="input2" destination="9s2-oB-YtU" id="IKC-gK-40W"/>
                         <outlet property="searchTypeSelector" destination="AlO-9V-3eD" id="IFf-qS-nHu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJz-oz-Bu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1296" y="-303"/>
+        </scene>
+        <!--Search Results Table View Controller-->
+        <scene sceneID="1xf-9f-jvQ">
+            <objects>
+                <tableViewController id="vwd-f1-oaL" customClass="SearchResultsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="C83-3K-70z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="5x7-Vx-Kj9" detailTextLabel="gnW-ys-IId" style="IBUITableViewCellStyleSubtitle" id="gaE-ab-UHm">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gaE-ab-UHm" id="CnD-h4-NOV">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5x7-Vx-Kj9">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gnW-ys-IId">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vwd-f1-oaL" id="iVv-Bw-zA2"/>
+                            <outlet property="delegate" destination="vwd-f1-oaL" id="q8d-Eg-RcR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="pEY-UO-TlF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UjH-RY-hFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708" y="-295"/>
         </scene>
         <!--Flight Details-->
         <scene sceneID="Tcq-M3-XWD">
@@ -160,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kw6-Rh-YxW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1725" y="-303"/>
+            <point key="canvasLocation" x="2106" y="-303"/>
         </scene>
         <!--Planes-->
         <scene sceneID="wg7-f3-ORb">

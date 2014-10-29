@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface SearchViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *carrierInput;
-@property (weak, nonatomic) IBOutlet UITextField *flightNumInput;
+@property (weak, nonatomic) IBOutlet UITextField *input1;
+@property (weak, nonatomic) IBOutlet UITextField *input2;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *searchTypeSelector;
 @property NSString *searchType;
+@property NSString *dateSelection;
 
 @end
