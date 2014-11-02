@@ -7,6 +7,7 @@
 //
 
 #import "FlightDetailViewController.h"
+#import "MBProgressHUD.h"
 
 @interface FlightDetailViewController()
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
@@ -24,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *destLocationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *arrivalTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *delayLabel;
+
+- (IBAction)saveFlightButton:(id)sender;
 
 @end
 
@@ -54,22 +57,18 @@
     
     NSMutableString *depTerminalGate = [NSMutableString stringWithString:@""];
     if (self.flight.departureTerminal) {
-        NSLog(@"Departure terminal exists");
         [depTerminalGate appendString:[NSString stringWithFormat:@"Terminal %@", self.flight.departureTerminal]];
     }
     if (self.flight.departureGate) {
-        NSLog(@"Departure gate exists");
         [depTerminalGate appendString:[NSString stringWithFormat:@" Gate %@", self.flight.departureGate]];
     }
     self.destGateLabel.text = depTerminalGate;
     
     NSMutableString *arrTerminalGate = [NSMutableString stringWithString:@""];
     if (self.flight.arrivalTerminal) {
-        NSLog(@"Arrival terminal exists");
         [arrTerminalGate appendString:[NSString stringWithFormat:@"Terminal %@", self.flight.arrivalTerminal]];
     }
     if (self.flight.arrivalGate) {
-        NSLog(@"Arrival gate exists");
         [arrTerminalGate appendString:[NSString stringWithFormat:@" Gate %@", self.flight.arrivalGate]];
     }
     self.originGateLabel.text = arrTerminalGate;
@@ -81,4 +80,55 @@
     self.delayLabel.text = [NSString stringWithFormat:@"%d minutes", self.flight.delay];
 }
 
+- (IBAction)saveFlightButton:(id)sender {
+    // Save flight to Parse
+    PFObject *flightObject = [PFObject objectWithClassName:@"SavedFlight"];
+    flightObject[@"flightID"] = self.flight.flightID;
+    flightObject[@"airline"] = self.flight.airline;
+    flightObject[@"flightNumber"] = self.flight.flightNumber;
+    flightObject[@"status"] = self.flight.status;
+    flightObject[@"origin"] = self.flight.origin;
+    flightObject[@"destination"] = self.flight.destination;
+    flightObject[@"flightDuration"] = self.flight.flightDuration;
+    flightObject[@"departureDate"] = self.flight.departureDate;
+    flightObject[@"arrivalDate"] = self.flight.arrivalDate;
+    if (self.flight.departureGate) {
+        flightObject[@"departureGate"] = self.flight.departureGate;
+    }
+    if (self.flight.arrivalGate) {
+        flightObject[@"arrivalGate"] = self.flight.arrivalGate;
+    }
+    if (self.flight.departureTerminal) {
+        flightObject[@"departureTerminal"] = self.flight.departureTerminal;
+    }
+    if (self.flight.arrivalTerminal) {
+        flightObject[@"arrivalTerminal"] = self.flight.arrivalTerminal;
+    }
+    if (self.flight.iataCode) {
+        flightObject[@"iataCode"] = self.flight.iataCode;
+    }
+    if (self.flight.delay) {
+        flightObject[@"delay"] = [NSString stringWithFormat:@"%d", self.flight.delay];
+    }
+
+    [flightObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        NSLog(@"%@", flightObject.objectId);
+    }];
+
+    // Save the object ID of this flight object in order to retrieve it from Parse later.
+    // Then save this information with NSCoding before leaving this view.
+//     [self.recipeIDs addObject:[NSString stringWithFormat:@"%@", recipeObject.objectId]];
+     
+     // Show message that flight was saved to favorites.
+     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+     
+     // Configure for text only and offset down
+     hud.mode = MBProgressHUDModeText;
+     hud.labelText = @"Flight saved";
+     hud.margin = 10.f;
+     hud.yOffset = 150.f;
+     hud.removeFromSuperViewOnHide = YES;
+     
+     [hud hide:YES afterDelay:1];
+}
 @end

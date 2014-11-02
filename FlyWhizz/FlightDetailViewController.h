@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 ASU CSE 494. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
 #import "FlightModel.h"
 
