@@ -37,6 +37,7 @@
 		E1B392781A01F0D000055144 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B392771A01F0D000055144 /* Social.framework */; };
 		E1B3927C1A06DC2500055144 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B3927B1A06DC2500055144 /* MBProgressHUD.m */; };
 		E1B3927F1A06E39600055144 /* AirportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B3927E1A06E39600055144 /* AirportModel.m */; };
+		E1B392821A06ED3900055144 /* AirlineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B392811A06ED3900055144 /* AirlineModel.m */; };
 		E508659519F8489400584125 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E508659419F8489400584125 /* Constants.m */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,8 @@
 		E1B3927B1A06DC2500055144 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../MBProgressHUD.m; sourceTree = "<group>"; };
 		E1B3927D1A06E39600055144 /* AirportModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirportModel.h; sourceTree = "<group>"; };
 		E1B3927E1A06E39600055144 /* AirportModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirportModel.m; sourceTree = "<group>"; };
+		E1B392801A06ED3900055144 /* AirlineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirlineModel.h; sourceTree = "<group>"; };
+		E1B392811A06ED3900055144 /* AirlineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirlineModel.m; sourceTree = "<group>"; };
 		E508659319F8489400584125 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		E508659419F8489400584125 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,6 +240,8 @@
 				E508659419F8489400584125 /* Constants.m */,
 				E1B3927D1A06E39600055144 /* AirportModel.h */,
 				E1B3927E1A06E39600055144 /* AirportModel.m */,
+				E1B392801A06ED3900055144 /* AirlineModel.h */,
+				E1B392811A06ED3900055144 /* AirlineModel.m */,
 			);
 			name = "FlyWhizz Models";
 			path = ..;
@@ -360,6 +365,7 @@
 				95DBF70519F84A440009D432 /* AirlinesViewController.m in Sources */,
 				E1B3927C1A06DC2500055144 /* MBProgressHUD.m in Sources */,
 				95A5BE2D1A01855300B22192 /* SearchResultsTableViewController.m in Sources */,
+				E1B392821A06ED3900055144 /* AirlineModel.m in Sources */,
 				E1B3925A1A01B41E00055144 /* FlightDetailViewController.m in Sources */,
 				95A5BE301A019A2400B22192 /* FlightModel.m in Sources */,
 				95A5BF0619F8312F000A3F41 /* FlightsViewController.m in Sources */,
