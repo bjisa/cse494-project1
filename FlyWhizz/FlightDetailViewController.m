@@ -26,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *arrivalTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *delayLabel;
 
+@property NSMutableArray *flightObjectIDs;
+
 - (IBAction)saveFlightButton:(id)sender;
 
 @end
@@ -34,6 +36,8 @@
 
 -(void) viewDidLoad {
     [super viewDidLoad];
+    
+    self.flightObjectIDs = [[NSMutableArray alloc] init];
     
     self.flightDetailLabel.text = [NSString stringWithFormat:@"%@ %@", self.flight.airline, self.flight.flightNumber];
     NSString *status = @"Status unknown";
@@ -80,6 +84,10 @@
     self.delayLabel.text = [NSString stringWithFormat:@"%d minutes", self.flight.delay];
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    [self saveChecklistItems];
+}
+
 - (IBAction)saveFlightButton:(id)sender {
     // Save flight to Parse
     PFObject *flightObject = [PFObject objectWithClassName:@"SavedFlight"];
@@ -113,11 +121,11 @@
 
     [flightObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         NSLog(@"%@", flightObject.objectId);
+        // Save the object ID of this flight object in order to retrieve it from Parse later.
+        // Save this information with NSCoding before leaving this view.
+        [self.flightObjectIDs addObject:flightObject.objectId];
+        NSLog(@"saved ID: %@", self.flightObjectIDs);
     }];
-
-    // Save the object ID of this flight object in order to retrieve it from Parse later.
-    // Then save this information with NSCoding before leaving this view.
-//     [self.recipeIDs addObject:[NSString stringWithFormat:@"%@", recipeObject.objectId]];
      
      // Show message that flight was saved to favorites.
      MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
@@ -131,4 +139,38 @@
      
      [hud hide:YES afterDelay:1];
 }
+
+#pragma mark - NSCoding
+
+// Functions for use with NSCoding
+- (NSString *)documentsDirectory
+{
+    return [@"~/Documents" stringByExpandingTildeInPath];
+}
+
+- (NSString *)dataFilePath
+{
+    NSLog(@"%@",[self documentsDirectory]);
+    return [[self documentsDirectory] stringByAppendingPathComponent:@"Checklist.plist"];
+    
+}
+
+// Need to change this to store flight ID in a shared instance of NSMutableArray
+- (void)saveChecklistItems
+{
+    // Save data onto the disk.
+    // Archiver uses bucket of bits to dump serialized objects.
+    NSMutableData *data = [[NSMutableData alloc] init];
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+    
+    // What needs to be encoded?
+    [archiver encodeObject:self.flightObjectIDs forKey:@"savedFlightIDs"];
+    
+    // All objects get encoded at the same time here.
+    [archiver finishEncoding];
+    
+    // Write the data to a file.
+    [data writeToFile:[self dataFilePath] atomically:YES];
+}
+
 @end
