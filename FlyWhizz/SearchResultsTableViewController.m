@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 ASU CSE 494. All rights reserved.
 //
 
+#import "AirportModel.h"
 #import "Constants.h"
 #import "FlightModel.h"
 #import "FlightDetailViewController.h"
@@ -24,6 +25,8 @@
     self.results = [[NSMutableArray alloc] init];
     
     self.flights2 = [[NSMutableArray alloc] init];
+    
+    self.airports = [[NSMutableDictionary alloc] init];
     
    // dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self getFlightResults];
@@ -46,7 +49,7 @@
     int month = (int)theDate.month;
     int day = (int)theDate.day;
     
-    NSString * queryString;
+    NSString *queryString;
     
     if ([self.searchType isEqualToString:@"byOriginDestination"])
     {
@@ -61,13 +64,20 @@
 
     NSDictionary *flights = [NSJSONSerialization JSONObjectWithData:flightsQuery options:kNilOptions error:Nil];
     
-    NSDictionary * flightsToSave = flights[@"flightStatuses"];
+    NSDictionary *flightsToSave = flights[@"flightStatuses"];
     
-    for (NSDictionary * flight in flightsToSave) {
+    for (NSDictionary *flight in flightsToSave) {
         FlightModel * thisFlight = [[FlightModel alloc] initWithJSONDictionary:flight];
         [self.flights2 addObject:thisFlight];
     }
     
+    NSDictionary *appendix = flights[@"appendix"];
+    NSDictionary *airportsToSave = appendix[@"airports"];
+    for (NSDictionary *airport in airportsToSave) {
+        AirportModel *thisAirport = [[AirportModel alloc] initWithJSONDictionary:airport];
+        NSString *key = airport[@"fs"];
+        [self.airports setObject:thisAirport forKey:key];
+    }
 }
 
 // Pass the flight model to the FlightDetailViewController.
@@ -75,6 +85,7 @@
     FlightDetailViewController *destination = segue.destinationViewController;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     destination.flight = self.flights2[indexPath.row];
+    destination.airports = self.airports;
 }
 
 #pragma mark - TableViewDelegation

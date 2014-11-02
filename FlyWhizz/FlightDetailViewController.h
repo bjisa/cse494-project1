@@ -13,5 +13,6 @@
 @interface FlightDetailViewController : UIViewController
 
 @property FlightModel *flight;
+@property NSDictionary *airports;
 
 @end

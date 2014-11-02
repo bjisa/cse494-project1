@@ -12,6 +12,7 @@
 
 @property NSMutableArray *results;
 @property NSMutableArray *flights2;
+@property NSMutableDictionary *airports;
 @property NSString *originCode;
 @property NSString *destinationCode;
 @property NSString *flightNumber;

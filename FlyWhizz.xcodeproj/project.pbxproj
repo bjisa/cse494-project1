@@ -19,6 +19,24 @@
 		95A5BF1D19F83130000A3F41 /* FlyWhizzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF1C19F83130000A3F41 /* FlyWhizzTests.m */; };
 		95DBF70519F84A440009D432 /* AirlinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DBF70419F84A440009D432 /* AirlinesViewController.m */; };
 		95DBF70819F84A4D0009D432 /* ReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DBF70719F84A4D0009D432 /* ReviewsViewController.m */; };
+		E1B3925A1A01B41E00055144 /* FlightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B392591A01B41E00055144 /* FlightDetailViewController.m */; };
+		E1B3925D1A01E85900055144 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B3925B1A01E85900055144 /* Bolts.framework */; };
+		E1B3925E1A01E85900055144 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B3925C1A01E85900055144 /* Parse.framework */; };
+		E1B392601A01F02C00055144 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B3925F1A01F02C00055144 /* AudioToolbox.framework */; };
+		E1B392621A01F03200055144 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B392611A01F03200055144 /* CFNetwork.framework */; };
+		E1B392641A01F04000055144 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B392631A01F04000055144 /* CoreGraphics.framework */; };
+		E1B392661A01F04600055144 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B392651A01F04600055144 /* CoreLocation.framework */; };
+		E1B392681A01F05100055144 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B392671A01F05100055144 /* libz.dylib */; };
+		E1B3926A1A01F05D00055144 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B392691A01F05D00055144 /* MobileCoreServices.framework */; };
+		E1B3926C1A01F06600055144 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B3926B1A01F06600055144 /* QuartzCore.framework */; };
+		E1B3926E1A01F07100055144 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B3926D1A01F07100055144 /* Security.framework */; };
+		E1B392701A01F07700055144 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B3926F1A01F07700055144 /* StoreKit.framework */; };
+		E1B392721A01F08600055144 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B392711A01F08600055144 /* SystemConfiguration.framework */; };
+		E1B392741A01F0C400055144 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B392731A01F0C400055144 /* Twitter.framework */; };
+		E1B392761A01F0C900055144 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B392751A01F0C900055144 /* Accounts.framework */; };
+		E1B392781A01F0D000055144 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B392771A01F0D000055144 /* Social.framework */; };
+		E1B3927C1A06DC2500055144 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B3927B1A06DC2500055144 /* MBProgressHUD.m */; };
+		E1B3927F1A06E39600055144 /* AirportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B3927E1A06E39600055144 /* AirportModel.m */; };
 		E508659519F8489400584125 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E508659419F8489400584125 /* Constants.m */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +76,27 @@
 		95DBF70419F84A440009D432 /* AirlinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirlinesViewController.m; sourceTree = "<group>"; };
 		95DBF70619F84A4D0009D432 /* ReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsViewController.h; sourceTree = "<group>"; };
 		95DBF70719F84A4D0009D432 /* ReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsViewController.m; sourceTree = "<group>"; };
+		E1B392581A01B41E00055144 /* FlightDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightDetailViewController.h; sourceTree = "<group>"; };
+		E1B392591A01B41E00055144 /* FlightDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightDetailViewController.m; sourceTree = "<group>"; };
+		E1B3925B1A01E85900055144 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		E1B3925C1A01E85900055144 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E1B3925F1A01F02C00055144 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E1B392611A01F03200055144 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E1B392631A01F04000055144 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E1B392651A01F04600055144 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E1B392671A01F05100055144 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E1B392691A01F05D00055144 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E1B3926B1A01F06600055144 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E1B3926D1A01F07100055144 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E1B3926F1A01F07700055144 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		E1B392711A01F08600055144 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E1B392731A01F0C400055144 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		E1B392751A01F0C900055144 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		E1B392771A01F0D000055144 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E1B3927A1A06DC2500055144 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../MBProgressHUD.h; sourceTree = "<group>"; };
+		E1B3927B1A06DC2500055144 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../MBProgressHUD.m; sourceTree = "<group>"; };
+		E1B3927D1A06E39600055144 /* AirportModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirportModel.h; sourceTree = "<group>"; };
+		E1B3927E1A06E39600055144 /* AirportModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirportModel.m; sourceTree = "<group>"; };
 		E508659319F8489400584125 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		E508659419F8489400584125 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +106,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B392761A01F0C900055144 /* Accounts.framework in Frameworks */,
+				E1B392601A01F02C00055144 /* AudioToolbox.framework in Frameworks */,
+				E1B3925D1A01E85900055144 /* Bolts.framework in Frameworks */,
+				E1B392621A01F03200055144 /* CFNetwork.framework in Frameworks */,
+				E1B392641A01F04000055144 /* CoreGraphics.framework in Frameworks */,
+				E1B392661A01F04600055144 /* CoreLocation.framework in Frameworks */,
+				E1B3926A1A01F05D00055144 /* MobileCoreServices.framework in Frameworks */,
+				E1B3925E1A01E85900055144 /* Parse.framework in Frameworks */,
+				E1B3926C1A01F06600055144 /* QuartzCore.framework in Frameworks */,
+				E1B3926E1A01F07100055144 /* Security.framework in Frameworks */,
+				E1B392781A01F0D000055144 /* Social.framework in Frameworks */,
+				E1B392701A01F07700055144 /* StoreKit.framework in Frameworks */,
+				E1B392721A01F08600055144 /* SystemConfiguration.framework in Frameworks */,
+				E1B392741A01F0C400055144 /* Twitter.framework in Frameworks */,
+				E1B392681A01F05100055144 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +140,7 @@
 				95A5BEFC19F8312F000A3F41 /* FlyWhizz */,
 				95A5BF1919F83130000A3F41 /* FlyWhizzTests */,
 				95A5BEFB19F8312F000A3F41 /* Products */,
+				E1B392791A01F2F800055144 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +158,10 @@
 			children = (
 				95A5BF0119F8312F000A3F41 /* AppDelegate.h */,
 				95A5BF0219F8312F000A3F41 /* AppDelegate.m */,
+				E1B3927A1A06DC2500055144 /* MBProgressHUD.h */,
+				E1B3927B1A06DC2500055144 /* MBProgressHUD.m */,
+				E1B392581A01B41E00055144 /* FlightDetailViewController.h */,
+				E1B392591A01B41E00055144 /* FlightDetailViewController.m */,
 				95A5BF0419F8312F000A3F41 /* FlightsViewController.h */,
 				95A5BF0519F8312F000A3F41 /* FlightsViewController.m */,
 				95A5BF0719F8312F000A3F41 /* PlanesViewController.h */,
@@ -147,6 +206,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E1B392791A01F2F800055144 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1B3925C1A01E85900055144 /* Parse.framework */,
+				E1B3925B1A01E85900055144 /* Bolts.framework */,
+				E1B3925F1A01F02C00055144 /* AudioToolbox.framework */,
+				E1B392631A01F04000055144 /* CoreGraphics.framework */,
+				E1B392611A01F03200055144 /* CFNetwork.framework */,
+				E1B392651A01F04600055144 /* CoreLocation.framework */,
+				E1B392671A01F05100055144 /* libz.dylib */,
+				E1B392691A01F05D00055144 /* MobileCoreServices.framework */,
+				E1B3926B1A01F06600055144 /* QuartzCore.framework */,
+				E1B392711A01F08600055144 /* SystemConfiguration.framework */,
+				E1B3926D1A01F07100055144 /* Security.framework */,
+				E1B3926F1A01F07700055144 /* StoreKit.framework */,
+				E1B392731A01F0C400055144 /* Twitter.framework */,
+				E1B392751A01F0C900055144 /* Accounts.framework */,
+				E1B392771A01F0D000055144 /* Social.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E508659219F8485800584125 /* FlyWhizz Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +235,8 @@
 				95A5BE2F1A019A2400B22192 /* FlightModel.h */,
 				E508659319F8489400584125 /* Constants.h */,
 				E508659419F8489400584125 /* Constants.m */,
+				E1B3927D1A06E39600055144 /* AirportModel.h */,
+				E1B3927E1A06E39600055144 /* AirportModel.m */,
 			);
 			name = "FlyWhizz Models";
 			path = ..;
@@ -273,8 +356,11 @@
 				E508659519F8489400584125 /* Constants.m in Sources */,
 				95A5BF0319F8312F000A3F41 /* AppDelegate.m in Sources */,
 				95DBF70819F84A4D0009D432 /* ReviewsViewController.m in Sources */,
+				E1B3927F1A06E39600055144 /* AirportModel.m in Sources */,
 				95DBF70519F84A440009D432 /* AirlinesViewController.m in Sources */,
+				E1B3927C1A06DC2500055144 /* MBProgressHUD.m in Sources */,
 				95A5BE2D1A01855300B22192 /* SearchResultsTableViewController.m in Sources */,
+				E1B3925A1A01B41E00055144 /* FlightDetailViewController.m in Sources */,
 				95A5BE301A019A2400B22192 /* FlightModel.m in Sources */,
 				95A5BF0619F8312F000A3F41 /* FlightsViewController.m in Sources */,
 				95A5BF0019F8312F000A3F41 /* main.m in Sources */,
@@ -400,6 +486,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FlyWhizz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,6 +500,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FlyWhizz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 ASU CSE 494. All rights reserved.
 //
 
+#import "AirportModel.h"
 #import "FlightDetailViewController.h"
 #import "MBProgressHUD.h"
 
@@ -36,7 +37,7 @@
 
 -(void) viewDidLoad {
     [super viewDidLoad];
-    
+        
     self.flightObjectIDs = [[NSMutableArray alloc] init];
     
     self.flightDetailLabel.text = [NSString stringWithFormat:@"%@ %@", self.flight.airline, self.flight.flightNumber];
@@ -82,6 +83,25 @@
     }
     
     self.delayLabel.text = [NSString stringWithFormat:@"%d minutes", self.flight.delay];
+
+    NSString *originKey = self.flight.origin;
+    AirportModel *originAirport = [self.airports objectForKey:originKey];
+    
+    if (originAirport) {
+        self.originAirportLabel.text = originAirport.airportName;
+        if (originAirport.city && originAirport.state) {
+            self.originLocationLabel.text = [NSString stringWithFormat:@"%@, %@", originAirport.city, originAirport.state];
+        }
+    }
+    
+    NSString *destKey = self.flight.destination;
+    AirportModel *destinationAirport = [self.airports objectForKey:destKey];
+    if (destinationAirport) {
+        self.destAirportLabel.text = destinationAirport.airportName;
+        if (destinationAirport.city && destinationAirport.state) {
+            self.destLocationLabel.text = [NSString stringWithFormat:@"%@, %@", destinationAirport.city, destinationAirport.state];
+        }
+    }
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
@@ -97,7 +117,9 @@
     flightObject[@"status"] = self.flight.status;
     flightObject[@"origin"] = self.flight.origin;
     flightObject[@"destination"] = self.flight.destination;
-    flightObject[@"flightDuration"] = self.flight.flightDuration;
+    if (self.flight.flightDuration) {
+        flightObject[@"flightDuration"] = self.flight.flightDuration;
+    }
     flightObject[@"departureDate"] = self.flight.departureDate;
     flightObject[@"arrivalDate"] = self.flight.arrivalDate;
     if (self.flight.departureGate) {
@@ -124,7 +146,7 @@
         // Save the object ID of this flight object in order to retrieve it from Parse later.
         // Save this information with NSCoding before leaving this view.
         [self.flightObjectIDs addObject:flightObject.objectId];
-        NSLog(@"saved ID: %@", self.flightObjectIDs);
+        NSLog(@"saved IDs: %@", self.flightObjectIDs);
     }];
      
      // Show message that flight was saved to favorites.
