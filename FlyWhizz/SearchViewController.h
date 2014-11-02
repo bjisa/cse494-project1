@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface SearchViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *input1;

@@ -55,6 +55,11 @@
     self.input2.placeholder = @"Flight Number";
     self.searchType = @"byFlightNum";
     self.dateSelection = @"Today";
+    
+    // Test Parse
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    testObject[@"foo"] = @"bar";
+    [testObject saveInBackground];
 }
 
 - (void)didReceiveMemoryWarning {

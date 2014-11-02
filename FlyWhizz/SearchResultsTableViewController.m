@@ -6,9 +6,10 @@
 //  Copyright (c) 2014 ASU CSE 494. All rights reserved.
 //
 
-#import "SearchResultsTableViewController.h"
 #import "Constants.h"
 #import "FlightModel.h"
+#import "FlightDetailViewController.h"
+#import "SearchResultsTableViewController.h"
 
 #define kBaseURL @"https://api.flightstats.com/flex/flightstatus/rest/v2/json/"
 #define kBaseURL @"https://api.flightstats.com/flex/flightstatus/rest/v2/json/"
@@ -69,6 +70,13 @@
     
 }
 
+// Pass the flight model to the FlightDetailViewController.
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    FlightDetailViewController *destination = segue.destinationViewController;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    destination.flight = self.flights2[indexPath.row];
+}
+
 #pragma mark - TableViewDelegation
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -83,7 +91,7 @@
     FlightModel *flight = self.flights2[indexPath.row];
     
     NSString * flightNum = flight.flightNumber;
-    NSString * times = [NSString stringWithFormat:@"Arr: %@ DepL %@", flight.arrivalDate, flight.departureDate];
+    NSString * times = [NSString stringWithFormat:@"Arr: %@ Dep: %@", flight.arrivalDate, flight.departureDate];
     
     cell.textLabel.text = flightNum;
     cell.detailTextLabel.text = times;
