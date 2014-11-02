@@ -12,7 +12,7 @@
 
 static SavedFlights *theFlights = nil;
 
-+(SavedFlights *)savedFlights {
++(SavedFlights *) savedFlights {
     
     if (theFlights == nil) {
         theFlights = [[SavedFlights alloc] init];
@@ -24,6 +24,8 @@ static SavedFlights *theFlights = nil;
 - (id) init {
     
     self = [super init];
+    
+    self.flightsList = [[NSMutableArray alloc] init];
     
     return self;
 }
