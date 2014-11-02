@@ -40,7 +40,7 @@
     [super viewDidLoad];
     
     // Replace with singleton class once created
-    self.flightObjectIDs = [[NSMutableArray alloc] init];
+    //self.flightObjectIDs = [[NSMutableArray alloc] init];
     
     NSString *airlineKey = self.flight.airline;
     AirlineModel *airlineModel = [self.airlines objectForKey:airlineKey];
@@ -156,8 +156,11 @@
         NSLog(@"%@", flightObject.objectId);
         // Save the object ID of this flight object in order to retrieve it from Parse later.
         // Save this information with NSCoding before leaving this view.
-        [self.flightObjectIDs addObject:flightObject.objectId];
-        NSLog(@"saved IDs: %@", self.flightObjectIDs);
+        //[self.flightObjectIDs addObject:flightObject.objectId];
+        //NSLog(@"saved IDs: %@", self.flightObjectIDs);
+        
+        SavedFlights *flights = [SavedFlights savedFlights];
+        [flights.flightsList addObject:flightObject.objectId];
     }];
      
      // Show message that flight was saved to favorites.

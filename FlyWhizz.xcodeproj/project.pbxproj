@@ -38,6 +38,7 @@
 		E1B3927C1A06DC2500055144 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B3927B1A06DC2500055144 /* MBProgressHUD.m */; };
 		E1B3927F1A06E39600055144 /* AirportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B3927E1A06E39600055144 /* AirportModel.m */; };
 		E1B392821A06ED3900055144 /* AirlineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B392811A06ED3900055144 /* AirlineModel.m */; };
+		E1B392851A06F4D900055144 /* SavedFlights.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B392841A06F4D900055144 /* SavedFlights.m */; };
 		E508659519F8489400584125 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E508659419F8489400584125 /* Constants.m */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,8 @@
 		E1B3927E1A06E39600055144 /* AirportModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirportModel.m; sourceTree = "<group>"; };
 		E1B392801A06ED3900055144 /* AirlineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirlineModel.h; sourceTree = "<group>"; };
 		E1B392811A06ED3900055144 /* AirlineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirlineModel.m; sourceTree = "<group>"; };
+		E1B392831A06F4D900055144 /* SavedFlights.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedFlights.h; sourceTree = "<group>"; };
+		E1B392841A06F4D900055144 /* SavedFlights.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedFlights.m; sourceTree = "<group>"; };
 		E508659319F8489400584125 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		E508659419F8489400584125 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +162,8 @@
 		95A5BEFC19F8312F000A3F41 /* FlyWhizz */ = {
 			isa = PBXGroup;
 			children = (
+				E1B392831A06F4D900055144 /* SavedFlights.h */,
+				E1B392841A06F4D900055144 /* SavedFlights.m */,
 				95A5BF0119F8312F000A3F41 /* AppDelegate.h */,
 				95A5BF0219F8312F000A3F41 /* AppDelegate.m */,
 				E1B3927A1A06DC2500055144 /* MBProgressHUD.h */,
@@ -369,6 +374,7 @@
 				E1B3925A1A01B41E00055144 /* FlightDetailViewController.m in Sources */,
 				95A5BE301A019A2400B22192 /* FlightModel.m in Sources */,
 				95A5BF0619F8312F000A3F41 /* FlightsViewController.m in Sources */,
+				E1B392851A06F4D900055144 /* SavedFlights.m in Sources */,
 				95A5BF0019F8312F000A3F41 /* main.m in Sources */,
 				95995E4B19FEF91E000B4052 /* SearchViewController.m in Sources */,
 			);

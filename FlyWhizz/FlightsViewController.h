@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SavedFlights.h"
 
-@interface FlightsViewController : UIViewController
+@interface FlightsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
 

@@ -9,6 +9,7 @@
 #import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
 #import "FlightModel.h"
+#import "SavedFlights.h"
 
 @interface FlightDetailViewController : UIViewController
 
