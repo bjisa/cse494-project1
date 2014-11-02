@@ -96,6 +96,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     destination.flight = self.flights2[indexPath.row];
     destination.airports = self.airports;
+    destination.airlines = self.airlines;
 }
 
 #pragma mark - TableViewDelegation
@@ -110,8 +111,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     FlightModel *flight = self.flights2[indexPath.row];
+    NSString *airlineKey = flight.airline;
+    AirlineModel *airline = [self.airlines objectForKey:airlineKey];
     
-    NSString * flightNum = flight.flightNumber;
+    NSString * flightNum = [NSString stringWithFormat:@"%@ %@", airline.name, flight.flightNumber];
     NSString * times = [NSString stringWithFormat:@"Arr: %@ Dep: %@", flight.arrivalDate, flight.departureDate];
     
     cell.textLabel.text = flightNum;
