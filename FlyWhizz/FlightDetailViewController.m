@@ -83,6 +83,12 @@
     }
     
     self.delayLabel.text = [NSString stringWithFormat:@"%d minutes", self.flight.delay];
+    
+    NSString *planeModel = @"Plane type unknown";
+    if (self.flight.iataCode) {
+        planeModel = self.flight.iataCode;
+    }
+    self.planeModelLabel.text = planeModel;
 
     NSString *originKey = self.flight.origin;
     AirportModel *originAirport = [self.airports objectForKey:originKey];
