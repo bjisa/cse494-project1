@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 ASU CSE 494. All rights reserved.
 //
 
+#import "AirlineModel.h"
 #import "AirportModel.h"
 #import "Constants.h"
 #import "FlightModel.h"
@@ -27,6 +28,7 @@
     self.flights2 = [[NSMutableArray alloc] init];
     
     self.airports = [[NSMutableDictionary alloc] init];
+    self.airlines = [[NSMutableDictionary alloc] init];
     
    // dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self getFlightResults];
@@ -72,11 +74,19 @@
     }
     
     NSDictionary *appendix = flights[@"appendix"];
+    
     NSDictionary *airportsToSave = appendix[@"airports"];
     for (NSDictionary *airport in airportsToSave) {
         AirportModel *thisAirport = [[AirportModel alloc] initWithJSONDictionary:airport];
         NSString *key = airport[@"fs"];
         [self.airports setObject:thisAirport forKey:key];
+    }
+    
+    NSDictionary *airlinesToSave = appendix[@"airlines"];
+    for (NSDictionary *airline in airlinesToSave) {
+        AirlineModel *thisAirline = [[AirlineModel alloc] initWithJSONDictionary:airline];
+        NSString *key = airline[@"fs"];
+        [self.airlines setObject:thisAirline forKey:key];
     }
 }
 

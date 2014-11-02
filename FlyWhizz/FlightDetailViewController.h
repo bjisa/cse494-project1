@@ -14,5 +14,6 @@
 
 @property FlightModel *flight;
 @property NSDictionary *airports;
+@property NSDictionary *airlines;
 
 @end
