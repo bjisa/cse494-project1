@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 ASU CSE 494. All rights reserved.
 //
 
-#import "AirlineModel.h"
 #import "AirportModel.h"
 #import "FlightDetailViewController.h"
 #import "MBProgressHUD.h"
@@ -46,9 +45,7 @@
     [self loadChecklistItems];
     NSLog(@"after load %@", self.flightIDs);
     
-    NSString *airlineKey = self.flight.airline;
-    AirlineModel *airlineModel = [self.airlines objectForKey:airlineKey];
-    self.flightDetailLabel.text = [NSString stringWithFormat:@"%@ %@", airlineModel.name, self.flight.flightNumber];
+    self.flightDetailLabel.text = [NSString stringWithFormat:@"%@ %@", self.flight.airlineName, self.flight.flightNumber];
     
     NSString *status = @"Status unknown";
     if ([self.flight.status isEqualToString:@"A"]) {

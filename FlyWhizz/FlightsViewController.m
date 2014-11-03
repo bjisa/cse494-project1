@@ -7,6 +7,7 @@
 //
 
 #import "FlightModel.h"
+#import "FlightDetailViewController.h"
 #import "FlightsViewController.h"
 
 @interface FlightsViewController ()
@@ -17,6 +18,7 @@
 @property NSMutableArray *flightModels;
 @property NSMutableArray *flightParseObjects;
 @property NSMutableArray *flightIDs;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -87,6 +89,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+// Pass the flight model to the FlightDetailViewController.
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    FlightDetailViewController *destination = segue.destinationViewController;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    destination.flight = self.flightModels[indexPath.row];
+}
+
 #pragma mark - TableViewDelegation
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -121,6 +130,10 @@
     [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
 
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"SavedFlights" sender:self];
 }
 
 #pragma mark - NSCoding

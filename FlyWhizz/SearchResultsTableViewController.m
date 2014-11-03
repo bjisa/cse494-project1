@@ -98,7 +98,6 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     destination.flight = self.flights2[indexPath.row];
     destination.airports = self.airports;
-    destination.airlines = self.airlines;
 }
 
 #pragma mark - TableViewDelegation
@@ -113,16 +112,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     FlightModel *flight = self.flights2[indexPath.row];
-    NSString *airlineKey = flight.airline;
-    AirlineModel *airline = [self.airlines objectForKey:airlineKey];
     
-    if (flight.airlineName) {
-        NSString *flightNum = [NSString stringWithFormat:@"%@ %@", flight.airlineName, flight.flightNumber];
-        cell.textLabel.text = flightNum;
-    } else {
-        NSString *flightNum = [NSString stringWithFormat:@"%@ %@", airline.name, flight.flightNumber];
-        cell.textLabel.text = flightNum;
-    }
+    NSString *flightNum = [NSString stringWithFormat:@"%@ %@", flight.airlineName, flight.flightNumber];
+    cell.textLabel.text = flightNum;
     
     NSInteger durationMinutes = [flight.flightDuration integerValue];
     NSInteger durHours = durationMinutes / 60;

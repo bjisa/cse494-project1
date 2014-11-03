@@ -66,6 +66,8 @@
                     <connections>
                         <outlet property="savedFlightsTableView" destination="uQd-DF-cmD" id="rNF-JW-5fh"/>
                         <outlet property="searchDisplayController" destination="jK4-24-eUg" id="O59-jw-mjB"/>
+                        <outlet property="tableView" destination="uQd-DF-cmD" id="tTn-Ov-3ij"/>
+                        <segue destination="zDM-Tm-SqK" kind="push" identifier="SavedFlights" id="43N-lc-6JW"/>
                     </connections>
                 </viewController>
                 <searchDisplayController id="jK4-24-eUg">
@@ -389,7 +391,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kw6-Rh-YxW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1169" y="483"/>
+            <point key="canvasLocation" x="1240" y="582"/>
         </scene>
         <!--Planes-->
         <scene sceneID="wg7-f3-ORb">
@@ -503,4 +505,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="43N-lc-6JW"/>
+    </inferredMetricsTieBreakers>
 </document>
