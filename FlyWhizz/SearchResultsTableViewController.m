@@ -66,13 +66,6 @@
 
     NSDictionary *flights = [NSJSONSerialization JSONObjectWithData:flightsQuery options:kNilOptions error:Nil];
     
-    NSDictionary *flightsToSave = flights[@"flightStatuses"];
-    
-    for (NSDictionary *flight in flightsToSave) {
-        FlightModel * thisFlight = [[FlightModel alloc] initWithJSONDictionary:flight];
-        [self.flights2 addObject:thisFlight];
-    }
-    
     NSDictionary *appendix = flights[@"appendix"];
     
     NSDictionary *airportsToSave = appendix[@"airports"];
@@ -87,6 +80,15 @@
         AirlineModel *thisAirline = [[AirlineModel alloc] initWithJSONDictionary:airline];
         NSString *key = airline[@"fs"];
         [self.airlines setObject:thisAirline forKey:key];
+    }
+    
+    NSDictionary *flightsToSave = flights[@"flightStatuses"];
+    
+    for (NSDictionary *flight in flightsToSave) {
+        FlightModel * thisFlight = [[FlightModel alloc] initWithJSONDictionary:flight];
+        AirlineModel *airline = [self.airlines objectForKey:thisFlight.airline];
+        thisFlight.airlineName = airline.name;
+        [self.flights2 addObject:thisFlight];
     }
 }
 
@@ -114,10 +116,19 @@
     NSString *airlineKey = flight.airline;
     AirlineModel *airline = [self.airlines objectForKey:airlineKey];
     
-    NSString * flightNum = [NSString stringWithFormat:@"%@ %@", airline.name, flight.flightNumber];
-    NSString * times = [NSString stringWithFormat:@"Arr: %@ Dep: %@", flight.arrivalDate, flight.departureDate];
+    if (flight.airlineName) {
+        NSString *flightNum = [NSString stringWithFormat:@"%@ %@", flight.airlineName, flight.flightNumber];
+        cell.textLabel.text = flightNum;
+    } else {
+        NSString *flightNum = [NSString stringWithFormat:@"%@ %@", airline.name, flight.flightNumber];
+        cell.textLabel.text = flightNum;
+    }
     
-    cell.textLabel.text = flightNum;
+    NSInteger durationMinutes = [flight.flightDuration integerValue];
+    NSInteger durHours = durationMinutes / 60;
+    NSInteger durMin = durationMinutes - (durHours * 60);
+    NSString *times = [NSString stringWithFormat:@"Duration: %d hr %d min", (int)durHours, (int)durMin];
+    
     cell.detailTextLabel.text = times;
     [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
     

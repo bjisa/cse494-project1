@@ -28,7 +28,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *arrivalTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *delayLabel;
 
-@property NSMutableArray *flightObjectIDs;
+//@property SavedFlights *savedFlights;
+@property NSMutableArray *flightIDs;
 
 - (IBAction)saveFlightButton:(id)sender;
 
@@ -39,8 +40,11 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
     
-    // Replace with singleton class once created
-    //self.flightObjectIDs = [[NSMutableArray alloc] init];
+    //self.savedFlights = [SavedFlights savedFlights];
+    self.flightIDs = [[NSMutableArray alloc] init];
+    NSLog(@"before load %@", self.flightIDs);
+    [self loadChecklistItems];
+    NSLog(@"after load %@", self.flightIDs);
     
     NSString *airlineKey = self.flight.airline;
     AirlineModel *airlineModel = [self.airlines objectForKey:airlineKey];
@@ -116,7 +120,9 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
+    // Save savedFlights here.
     [self saveChecklistItems];
+    NSLog(@"Flights saved");
 }
 
 - (IBAction)saveFlightButton:(id)sender {
@@ -124,6 +130,7 @@
     PFObject *flightObject = [PFObject objectWithClassName:@"SavedFlight"];
     flightObject[@"flightID"] = self.flight.flightID;
     flightObject[@"airline"] = self.flight.airline;
+    flightObject[@"airlineName"] = self.flight.airlineName;
     flightObject[@"flightNumber"] = self.flight.flightNumber;
     flightObject[@"status"] = self.flight.status;
     flightObject[@"origin"] = self.flight.origin;
@@ -155,12 +162,8 @@
     [flightObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         NSLog(@"%@", flightObject.objectId);
         // Save the object ID of this flight object in order to retrieve it from Parse later.
-        // Save this information with NSCoding before leaving this view.
-        //[self.flightObjectIDs addObject:flightObject.objectId];
-        //NSLog(@"saved IDs: %@", self.flightObjectIDs);
-        
-        SavedFlights *flights = [SavedFlights savedFlights];
-        [flights.flightsList addObject:flightObject.objectId];
+        [self.flightIDs addObject:flightObject.objectId];
+        NSLog(@"FlightIDs in Detail View: %@", self.flightIDs);
     }];
      
      // Show message that flight was saved to favorites.
@@ -187,11 +190,10 @@
 - (NSString *)dataFilePath
 {
     NSLog(@"%@",[self documentsDirectory]);
-    return [[self documentsDirectory] stringByAppendingPathComponent:@"Checklist.plist"];
+    return [[self documentsDirectory] stringByAppendingPathComponent:@"Flights.plist"];
     
 }
 
-// Need to change this to store flight ID in a shared instance of NSMutableArray
 - (void)saveChecklistItems
 {
     // Save data onto the disk.
@@ -200,13 +202,30 @@
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
     
     // What needs to be encoded?
-    [archiver encodeObject:self.flightObjectIDs forKey:@"savedFlightIDs"];
+    [archiver encodeObject:self.flightIDs forKey:@"savedFlights"];
     
     // All objects get encoded at the same time here.
     [archiver finishEncoding];
     
     // Write the data to a file.
     [data writeToFile:[self dataFilePath] atomically:YES];
+}
+
+- (void)loadChecklistItems
+{
+    NSString *path = [self dataFilePath];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        NSData *data = [[NSData alloc] initWithContentsOfFile:path];
+        NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+        
+        NSLog(@"Before decode %@", self.flightIDs);
+        self.flightIDs = [unarchiver decodeObjectForKey:@"savedFlights"];
+        NSLog(@"After decode %@", self.flightIDs);
+        
+        // Won't actually decode until here.
+        [unarchiver finishDecoding];
+    }
 }
 
 @end

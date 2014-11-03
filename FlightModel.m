@@ -14,6 +14,7 @@
     if (self = [super init]) {
         self.flightID = dict[@"flightId"];
         self.airline = dict[@"carrierFsCode"];
+        self.airlineName = [NSString stringWithString:dict[@"carrierFsCode"]];
         self.flightNumber = dict[@"flightNumber"];
         self.status = dict[@"status"];
         self.origin = dict[@"departureAirportFsCode"];

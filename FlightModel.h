@@ -12,6 +12,7 @@
 
 @property NSString *flightID;
 @property NSString *airline;
+@property NSString *airlineName;
 @property NSString *flightNumber;
 @property NSString *status;
 @property NSString *origin;
