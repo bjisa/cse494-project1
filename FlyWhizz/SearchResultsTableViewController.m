@@ -88,6 +88,15 @@
         FlightModel * thisFlight = [[FlightModel alloc] initWithJSONDictionary:flight];
         AirlineModel *airline = [self.airlines objectForKey:thisFlight.airline];
         thisFlight.airlineName = airline.name;
+        AirportModel *destAirport = [self.airports objectForKey:thisFlight.destination];
+        //NSLog(@"dest name: %@", destAirport.airportName);
+        thisFlight.destAirportName = destAirport.airportName;
+        thisFlight.destinationCity = destAirport.city;
+        thisFlight.destinationState = destAirport.state;
+        AirportModel *originAirport = [self.airports objectForKey:thisFlight.origin];
+        thisFlight.originAirportName = originAirport.airportName;
+        thisFlight.originCity = originAirport.city;
+        thisFlight.originState = originAirport.state;
         [self.flights2 addObject:thisFlight];
     }
 }

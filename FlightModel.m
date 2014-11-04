@@ -57,6 +57,13 @@
             }
             self.delay = totalDelay;
         }
+        
+        self.destinationCity = @"Unknown City";
+        self.originCity = @"Unknown City";
+        self.destinationState = @"Unknown State";
+        self.originState = @"Unknown State";
+        self.destAirportName = @"Unknown Airport Name";
+        self.originAirportName = @"Unknown Airtport Name";
     }
     return self;
 }

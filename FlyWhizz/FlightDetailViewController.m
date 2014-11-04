@@ -96,24 +96,13 @@
     }
     self.planeModelLabel.text = planeModel;
 
-    NSString *originKey = self.flight.origin;
-    AirportModel *originAirport = [self.airports objectForKey:originKey];
     
-    if (originAirport) {
-        self.originAirportLabel.text = originAirport.airportName;
-        if (originAirport.city && originAirport.state) {
-            self.originLocationLabel.text = [NSString stringWithFormat:@"%@, %@", originAirport.city, originAirport.state];
-        }
-    }
+    NSLog(@"In Detail View: Origin Airport Name: %@", self.flight.originAirportName);
+    self.originAirportLabel.text = self.flight.originAirportName;
+    self.originLocationLabel.text = [NSString stringWithFormat:@"%@, %@", self.flight.originCity, self.flight.originState];
     
-    NSString *destKey = self.flight.destination;
-    AirportModel *destinationAirport = [self.airports objectForKey:destKey];
-    if (destinationAirport) {
-        self.destAirportLabel.text = destinationAirport.airportName;
-        if (destinationAirport.city && destinationAirport.state) {
-            self.destLocationLabel.text = [NSString stringWithFormat:@"%@, %@", destinationAirport.city, destinationAirport.state];
-        }
-    }
+    self.destAirportLabel.text = self.flight.destAirportName;
+    self.destLocationLabel.text = [NSString stringWithFormat:@"%@, %@", self.flight.destinationCity, self.flight.destinationState];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
@@ -155,6 +144,12 @@
     if (self.flight.delay) {
         flightObject[@"delay"] = [NSString stringWithFormat:@"%d", self.flight.delay];
     }
+    flightObject[@"destinationCity"] = self.flight.destinationCity;
+    flightObject[@"originCity"] = self.flight.originCity;
+    flightObject[@"destinationState"] = self.flight.destinationState;
+    flightObject[@"originState"] = self.flight.originState;
+    flightObject[@"destAirportName"] = self.flight.destAirportName;
+    flightObject[@"originAirportName"] = self.flight.originAirportName;
 
     [flightObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         NSLog(@"%@", flightObject.objectId);
@@ -187,7 +182,7 @@
 - (NSString *)dataFilePath
 {
     NSLog(@"%@",[self documentsDirectory]);
-    return [[self documentsDirectory] stringByAppendingPathComponent:@"Flights.plist"];
+    return [[self documentsDirectory] stringByAppendingPathComponent:@"Flight.plist"];
     
 }
 

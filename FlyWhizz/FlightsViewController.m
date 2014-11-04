@@ -73,6 +73,12 @@
         flightModel.arrivalTerminal = flight[@"arrivalTerminal"];
         flightModel.iataCode = flight[@"iataCode"];
         flightModel.delay = [flight[@"delay"] intValue];
+        flightModel.destinationCity = flight[@"destinationCity"];
+        flightModel.originCity = flight[@"originCity"];;
+        flightModel.destinationState = flight[@"destinationState"];
+        flightModel.originState = flight[@"originState"];
+        flightModel.destAirportName = flight[@"destAirportName"];
+        flightModel.originAirportName = flight[@"originAirportName"];
         
         [self.flightModels addObject:flightModel];
     }
@@ -91,15 +97,16 @@
 
 // Pass the flight model to the FlightDetailViewController.
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    FlightDetailViewController *destination = segue.destinationViewController;
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    destination.flight = self.flightModels[indexPath.row];
+    if ([segue.identifier isEqualToString:@"SavedFlights"]) {
+        FlightDetailViewController *destination = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        destination.flight = self.flightModels[indexPath.row];
+    }
 }
 
 #pragma mark - TableViewDelegation
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //return self.savedFlights.flightsList.count;
     return self.flightModels.count;
 }
 
@@ -147,7 +154,7 @@
 - (NSString *)dataFilePath
 {
     NSLog(@"%@",[self documentsDirectory]);
-    return [[self documentsDirectory] stringByAppendingPathComponent:@"Flights.plist"];
+    return [[self documentsDirectory] stringByAppendingPathComponent:@"Flight.plist"];
     
 }
 
@@ -183,4 +190,7 @@
     }
 }
 
+- (IBAction)searchFlights:(id)sender {
+    [self performSegueWithIdentifier:@"Search" sender:self];
+}
 @end

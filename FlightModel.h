@@ -25,6 +25,12 @@
 @property NSString *departureTerminal;
 @property NSString *arrivalTerminal;
 @property NSString *iataCode;
+@property NSString *destinationCity;
+@property NSString *originCity;
+@property NSString *destinationState;
+@property NSString *originState;
+@property NSString *destAirportName;
+@property NSString *originAirportName;
 @property int delay;
 
 -(id) initWithJSONDictionary:(NSDictionary *)dict;

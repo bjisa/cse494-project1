@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FlightsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+- (IBAction)searchFlights:(id)sender;
 
 @end
 
