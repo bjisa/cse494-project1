@@ -14,7 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *savedFlightsTableView;
 
-//@property SavedFlights *savedFlights;
 @property NSMutableArray *flightModels;
 @property NSMutableArray *flightParseObjects;
 @property NSMutableArray *flightIDs;
@@ -28,7 +27,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //self.savedFlights = [SavedFlights savedFlights];
     self.flightModels = [[NSMutableArray alloc] init];
     self.flightParseObjects = [[NSMutableArray alloc] init];
     self.flightIDs = [[NSMutableArray alloc] init];
@@ -47,10 +45,8 @@
     [self loadChecklistItems];
     NSLog(@"Saved Flights ID List in FlightsViewController:%@", self.flightIDs);
     
-    // Fill flight list with flights saved in Parse.
     PFQuery *query = [PFQuery queryWithClassName:@"SavedFlight"];
     
-    // Get object with all IDs
     for (NSString *savedID in self.flightIDs) {
         NSLog(@"ID outside: %@", savedID);
         // Only try to read from Parse if ID is not null
@@ -63,7 +59,6 @@
     }
     
     for (PFObject *flight in self.flightParseObjects) {
-        // Use flightIDs to get saved flight details from Parse.
         FlightModel *flightModel = [[FlightModel alloc] init];
         flightModel.flightID = flight[@"flightID"];
         flightModel.airline = flight[@"airline"];
@@ -96,7 +91,6 @@
     [self saveChecklistItems];
 }
 
-// Pass the flight model to the FlightDetailViewController.
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"SavedFlights"]) {
         FlightDetailViewController *destination = segue.destinationViewController;
@@ -164,7 +158,6 @@
 
 #pragma mark - NSCoding
 
-// Functions for use with NSCoding
 - (NSString *)documentsDirectory
 {
     return [@"~/Documents" stringByExpandingTildeInPath];
@@ -179,18 +172,13 @@
 
 - (void)saveChecklistItems
 {
-    // Save data onto the disk.
-    // Archiver uses bucket of bits to dump serialized objects.
     NSMutableData *data = [[NSMutableData alloc] init];
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
     
-    // What needs to be encoded?
     [archiver encodeObject:self.flightIDs forKey:@"savedFlights"];
     
-    // All objects get encoded at the same time here.
     [archiver finishEncoding];
     
-    // Write the data to a file.
     [data writeToFile:[self dataFilePath] atomically:YES];
 }
 
@@ -204,7 +192,6 @@
         
         self.flightIDs = [unarchiver decodeObjectForKey:@"savedFlights"];
         
-        // Won't actually decode until here.
         [unarchiver finishDecoding];
     }
 }

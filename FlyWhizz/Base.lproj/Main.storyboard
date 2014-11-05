@@ -223,13 +223,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plane model" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CSo-yT-WWG">
-                                <rect key="frame" x="109" y="142" width="195" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin --> destination" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nzc-2K-U5r">
                                 <rect key="frame" x="16" y="171" width="147" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -366,6 +359,17 @@
                                     <action selector="saveFlightButton:" destination="zDM-Tm-SqK" eventType="touchUpInside" id="vhk-mY-8Wh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BAm-YS-AqY">
+                                <rect key="frame" x="109" y="135" width="195" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="View Plane Details">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gCB-WF-5wy" kind="push" id="7Rd-dp-KTf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -385,7 +389,6 @@
                         <outlet property="originAirportLabel" destination="oc3-91-QhA" id="Ccr-BT-L1e"/>
                         <outlet property="originGateLabel" destination="YuB-Yk-dbj" id="3Sw-VJ-CfB"/>
                         <outlet property="originLocationLabel" destination="3oi-19-PiT" id="0ag-zg-8US"/>
-                        <outlet property="planeModelLabel" destination="CSo-yT-WWG" id="K6k-Li-Te9"/>
                         <outlet property="routeLabel" destination="Nzc-2K-U5r" id="G0M-mg-DZb"/>
                         <outlet property="statusLabel" destination="hu4-Gc-4T7" id="x4c-er-uaK"/>
                     </connections>
@@ -393,6 +396,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kw6-Rh-YxW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1240" y="582"/>
+        </scene>
+        <!--Planes Detail View Controller-->
+        <scene sceneID="BQK-Lj-UGo">
+            <objects>
+                <viewController id="gCB-WF-5wy" customClass="PlanesDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NiS-uD-FXe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iwG-cV-94S"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Af0-51-0Rd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1669" y="582"/>
         </scene>
         <!--Planes-->
         <scene sceneID="wg7-f3-ORb">

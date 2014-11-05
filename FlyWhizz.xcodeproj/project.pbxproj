@@ -38,6 +38,23 @@
 		E1B3927C1A06DC2500055144 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B3927B1A06DC2500055144 /* MBProgressHUD.m */; };
 		E1B3927F1A06E39600055144 /* AirportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B3927E1A06E39600055144 /* AirportModel.m */; };
 		E1B392821A06ED3900055144 /* AirlineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B392811A06ED3900055144 /* AirlineModel.m */; };
+		E1B392931A0AC54F00055144 /* Air Canada rouge.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B392861A0AC54F00055144 /* Air Canada rouge.png */; };
+		E1B392941A0AC54F00055144 /* Alaska Airlines.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B392871A0AC54F00055144 /* Alaska Airlines.png */; };
+		E1B392951A0AC54F00055144 /* Allegiant Air.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B392881A0AC54F00055144 /* Allegiant Air.png */; };
+		E1B392961A0AC54F00055144 /* American Airlines.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B392891A0AC54F00055144 /* American Airlines.png */; };
+		E1B392971A0AC54F00055144 /* Delta Air Lines.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B3928A1A0AC54F00055144 /* Delta Air Lines.png */; };
+		E1B392981A0AC54F00055144 /* Frontier Airlines.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B3928B1A0AC54F00055144 /* Frontier Airlines.png */; };
+		E1B392991A0AC54F00055144 /* JetBlue Airways.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B3928C1A0AC54F00055144 /* JetBlue Airways.png */; };
+		E1B3929A1A0AC54F00055144 /* Southwest Airlines.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B3928D1A0AC54F00055144 /* Southwest Airlines.png */; };
+		E1B3929B1A0AC54F00055144 /* Spirit Airlines.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B3928E1A0AC54F00055144 /* Spirit Airlines.png */; };
+		E1B3929C1A0AC54F00055144 /* Sun Country Airlines.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B3928F1A0AC54F00055144 /* Sun Country Airlines.png */; };
+		E1B3929E1A0AC54F00055144 /* Virgin America.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B392911A0AC54F00055144 /* Virgin America.png */; };
+		E1B3929F1A0AC54F00055144 /* WestJet.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B392921A0AC54F00055144 /* WestJet.png */; };
+		E1B392A11A0AC5DB00055144 /* US Airways.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B392A01A0AC5DB00055144 /* US Airways.png */; };
+		E1B392A31A0AC6E500055144 /* SkyWest Airlines.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B392A21A0AC6E500055144 /* SkyWest Airlines.png */; };
+		E1B392A51A0AC72200055144 /* United Airlines.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B392A41A0AC72200055144 /* United Airlines.png */; };
+		E1B392A71A0AC79800055144 /* Republic Airlines.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1B392A61A0AC79800055144 /* Republic Airlines.jpg */; };
+		E1B392AA1A0AC9C100055144 /* PlanesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B392A91A0AC9C100055144 /* PlanesDetailViewController.m */; };
 		E508659519F8489400584125 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E508659419F8489400584125 /* Constants.m */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +117,24 @@
 		E1B3927E1A06E39600055144 /* AirportModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirportModel.m; sourceTree = "<group>"; };
 		E1B392801A06ED3900055144 /* AirlineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirlineModel.h; sourceTree = "<group>"; };
 		E1B392811A06ED3900055144 /* AirlineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirlineModel.m; sourceTree = "<group>"; };
+		E1B392861A0AC54F00055144 /* Air Canada rouge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Air Canada rouge.png"; sourceTree = "<group>"; };
+		E1B392871A0AC54F00055144 /* Alaska Airlines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alaska Airlines.png"; sourceTree = "<group>"; };
+		E1B392881A0AC54F00055144 /* Allegiant Air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Allegiant Air.png"; sourceTree = "<group>"; };
+		E1B392891A0AC54F00055144 /* American Airlines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "American Airlines.png"; sourceTree = "<group>"; };
+		E1B3928A1A0AC54F00055144 /* Delta Air Lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delta Air Lines.png"; sourceTree = "<group>"; };
+		E1B3928B1A0AC54F00055144 /* Frontier Airlines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Frontier Airlines.png"; sourceTree = "<group>"; };
+		E1B3928C1A0AC54F00055144 /* JetBlue Airways.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JetBlue Airways.png"; sourceTree = "<group>"; };
+		E1B3928D1A0AC54F00055144 /* Southwest Airlines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Southwest Airlines.png"; sourceTree = "<group>"; };
+		E1B3928E1A0AC54F00055144 /* Spirit Airlines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spirit Airlines.png"; sourceTree = "<group>"; };
+		E1B3928F1A0AC54F00055144 /* Sun Country Airlines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sun Country Airlines.png"; sourceTree = "<group>"; };
+		E1B392911A0AC54F00055144 /* Virgin America.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Virgin America.png"; sourceTree = "<group>"; };
+		E1B392921A0AC54F00055144 /* WestJet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WestJet.png; sourceTree = "<group>"; };
+		E1B392A01A0AC5DB00055144 /* US Airways.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "US Airways.png"; sourceTree = "<group>"; };
+		E1B392A21A0AC6E500055144 /* SkyWest Airlines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SkyWest Airlines.png"; sourceTree = "<group>"; };
+		E1B392A41A0AC72200055144 /* United Airlines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "United Airlines.png"; sourceTree = "<group>"; };
+		E1B392A61A0AC79800055144 /* Republic Airlines.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Republic Airlines.jpg"; sourceTree = "<group>"; };
+		E1B392A81A0AC9C100055144 /* PlanesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanesDetailViewController.h; sourceTree = "<group>"; };
+		E1B392A91A0AC9C100055144 /* PlanesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanesDetailViewController.m; sourceTree = "<group>"; };
 		E508659319F8489400584125 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		E508659419F8489400584125 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +200,8 @@
 				E1B3927B1A06DC2500055144 /* MBProgressHUD.m */,
 				E1B392581A01B41E00055144 /* FlightDetailViewController.h */,
 				E1B392591A01B41E00055144 /* FlightDetailViewController.m */,
+				E1B392A81A0AC9C100055144 /* PlanesDetailViewController.h */,
+				E1B392A91A0AC9C100055144 /* PlanesDetailViewController.m */,
 				95A5BF0419F8312F000A3F41 /* FlightsViewController.h */,
 				95A5BF0519F8312F000A3F41 /* FlightsViewController.m */,
 				95A5BF0719F8312F000A3F41 /* PlanesViewController.h */,
@@ -186,6 +223,22 @@
 		95A5BEFD19F8312F000A3F41 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E1B392A01A0AC5DB00055144 /* US Airways.png */,
+				E1B392861A0AC54F00055144 /* Air Canada rouge.png */,
+				E1B392871A0AC54F00055144 /* Alaska Airlines.png */,
+				E1B392881A0AC54F00055144 /* Allegiant Air.png */,
+				E1B392891A0AC54F00055144 /* American Airlines.png */,
+				E1B392A61A0AC79800055144 /* Republic Airlines.jpg */,
+				E1B3928A1A0AC54F00055144 /* Delta Air Lines.png */,
+				E1B392A21A0AC6E500055144 /* SkyWest Airlines.png */,
+				E1B3928B1A0AC54F00055144 /* Frontier Airlines.png */,
+				E1B3928C1A0AC54F00055144 /* JetBlue Airways.png */,
+				E1B3928D1A0AC54F00055144 /* Southwest Airlines.png */,
+				E1B3928E1A0AC54F00055144 /* Spirit Airlines.png */,
+				E1B392A41A0AC72200055144 /* United Airlines.png */,
+				E1B3928F1A0AC54F00055144 /* Sun Country Airlines.png */,
+				E1B392911A0AC54F00055144 /* Virgin America.png */,
+				E1B392921A0AC54F00055144 /* WestJet.png */,
 				95A5BEFE19F8312F000A3F41 /* Info.plist */,
 				95A5BEFF19F8312F000A3F41 /* main.m */,
 			);
@@ -338,8 +391,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B3929B1A0AC54F00055144 /* Spirit Airlines.png in Resources */,
+				E1B392A11A0AC5DB00055144 /* US Airways.png in Resources */,
+				E1B392941A0AC54F00055144 /* Alaska Airlines.png in Resources */,
+				E1B392951A0AC54F00055144 /* Allegiant Air.png in Resources */,
+				E1B3929E1A0AC54F00055144 /* Virgin America.png in Resources */,
+				E1B3929F1A0AC54F00055144 /* WestJet.png in Resources */,
+				E1B392A71A0AC79800055144 /* Republic Airlines.jpg in Resources */,
 				95A5BF0C19F8312F000A3F41 /* Main.storyboard in Resources */,
+				E1B392931A0AC54F00055144 /* Air Canada rouge.png in Resources */,
+				E1B392A51A0AC72200055144 /* United Airlines.png in Resources */,
+				E1B392961A0AC54F00055144 /* American Airlines.png in Resources */,
+				E1B3929A1A0AC54F00055144 /* Southwest Airlines.png in Resources */,
 				95A5BF1119F8312F000A3F41 /* LaunchScreen.xib in Resources */,
+				E1B392971A0AC54F00055144 /* Delta Air Lines.png in Resources */,
+				E1B3929C1A0AC54F00055144 /* Sun Country Airlines.png in Resources */,
+				E1B392991A0AC54F00055144 /* JetBlue Airways.png in Resources */,
+				E1B392981A0AC54F00055144 /* Frontier Airlines.png in Resources */,
+				E1B392A31A0AC6E500055144 /* SkyWest Airlines.png in Resources */,
 				95A5BF0E19F8312F000A3F41 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +439,7 @@
 				95A5BE301A019A2400B22192 /* FlightModel.m in Sources */,
 				95A5BF0619F8312F000A3F41 /* FlightsViewController.m in Sources */,
 				95A5BF0019F8312F000A3F41 /* main.m in Sources */,
+				E1B392AA1A0AC9C100055144 /* PlanesDetailViewController.m in Sources */,
 				95995E4B19FEF91E000B4052 /* SearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

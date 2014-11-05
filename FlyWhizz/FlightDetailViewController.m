@@ -9,12 +9,12 @@
 #import "AirportModel.h"
 #import "FlightDetailViewController.h"
 #import "MBProgressHUD.h"
+#import "PlanesDetailViewController.h"
 
 @interface FlightDetailViewController()
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *flightDetailLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
-@property (weak, nonatomic) IBOutlet UILabel *planeModelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *routeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *originGateLabel;
@@ -83,27 +83,22 @@
     self.originGateLabel.text = arrTerminalGate;
     
     self.delayLabel.text = [NSString stringWithFormat:@"%d minutes", self.flight.delay];
-    
-    NSString *planeModel = @"Plane type unknown";
-    if (self.flight.iataCode) {
-        planeModel = self.flight.iataCode;
-     }
-    self.planeModelLabel.text = planeModel;
 
     self.originAirportLabel.text = self.flight.originAirportName;
     self.originLocationLabel.text = [NSString stringWithFormat:@"%@, %@", self.flight.originCity, self.flight.originState];
     
     self.destAirportLabel.text = self.flight.destAirportName;
     self.destLocationLabel.text = [NSString stringWithFormat:@"%@, %@", self.flight.destinationCity, self.flight.destinationState];
+    
+    NSString *imageName = [NSString stringWithFormat:@"%@.png", self.flight.airlineName];
+    self.logoImageView.image = [UIImage imageNamed:imageName];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-    // Save savedFlights here.
     [self saveChecklistItems];
 }
 
 - (IBAction)saveFlightButton:(id)sender {
-    // Save flight to Parse
     PFObject *flightObject = [PFObject objectWithClassName:@"SavedFlight"];
     flightObject[@"flightID"] = self.flight.flightID;
     flightObject[@"airline"] = self.flight.airline;
@@ -161,9 +156,13 @@
      [hud hide:YES afterDelay:1];
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    PlanesDetailViewController *destination = segue.destinationViewController;
+    destination.iataCode = self.flight.iataCode;
+}
+
 #pragma mark - NSCoding
 
-// Functions for use with NSCoding
 - (NSString *)documentsDirectory
 {
     return [@"~/Documents" stringByExpandingTildeInPath];
@@ -178,18 +177,13 @@
 
 - (void)saveChecklistItems
 {
-    // Save data onto the disk.
-    // Archiver uses bucket of bits to dump serialized objects.
     NSMutableData *data = [[NSMutableData alloc] init];
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
     
-    // What needs to be encoded?
     [archiver encodeObject:self.flightIDs forKey:@"savedFlights"];
     
-    // All objects get encoded at the same time here.
     [archiver finishEncoding];
     
-    // Write the data to a file.
     [data writeToFile:[self dataFilePath] atomically:YES];
 }
 
@@ -203,7 +197,6 @@
         
         self.flightIDs = [unarchiver decodeObjectForKey:@"savedFlights"];
         
-        // Won't actually decode until here.
         [unarchiver finishDecoding];
     }
 }
