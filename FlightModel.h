@@ -19,7 +19,9 @@
 @property NSString *destination;
 @property NSString *flightDuration;
 @property NSString *departureDate;
+@property NSDate *depDate;
 @property NSString *arrivalDate;
+@property NSDate *arrDate;
 @property NSString *departureGate;
 @property NSString *arrivalGate;
 @property NSString *departureTerminal;

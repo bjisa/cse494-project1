@@ -25,7 +25,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
     self.flightModels = [[NSMutableArray alloc] init];
     self.flightParseObjects = [[NSMutableArray alloc] init];
@@ -70,6 +69,8 @@
         flightModel.flightDuration = flight[@"flightDuration"];
         flightModel.departureDate = flight[@"departureDate"];
         flightModel.arrivalDate = flight[@"arrivalDate"];
+        flightModel.depDate = flight[@"depDate"];
+        flightModel.arrDate = flight[@"arrDate"];
         flightModel.departureGate = flight[@"departureGate"];
         flightModel.arrivalGate = flight[@"arrivalGate"];
         flightModel.departureTerminal = flight[@"departureTerminal"];
@@ -130,14 +131,16 @@
         cell.textLabel.text = flightNum;
     }
     
-    NSInteger durationMinutes = [flight.flightDuration integerValue];
-    NSInteger durHours = durationMinutes / 60;
-    NSInteger durMin = durationMinutes - (durHours * 60);
-    NSString *times = [NSString stringWithFormat:@"Duration: %d hr %d min", (int)durHours, (int)durMin];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd/MM/yyyy"];
     
-    cell.detailTextLabel.text = times;
+    NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
+    [timeFormat setDateFormat:@"HH:mm"];
+     
+     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ Departure: %@ Arrival: %@",[dateFormat stringFromDate:flight.depDate], [timeFormat stringFromDate:flight.depDate], [timeFormat stringFromDate:flight.arrDate]];
+    
     [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
-
+    
     return cell;
 }
 

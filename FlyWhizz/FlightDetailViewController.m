@@ -61,8 +61,11 @@
     NSInteger durMin = durationMinutes - (durHours * 60);
     self.durationLabel.text = [NSString stringWithFormat:@"%d hr %d min", (int)durHours, (int)durMin];
     
-    self.departureTimeLabel.text = [NSString stringWithFormat:@"%@", self.flight.departureDate];
-    self.arrivalTimeLabel.text = [NSString stringWithFormat:@"%@", self.flight.arrivalDate];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd/MM/yyyy HH:mm"];
+    
+    self.departureTimeLabel.text = [dateFormat stringFromDate:self.flight.depDate];
+    self.arrivalTimeLabel.text = [dateFormat stringFromDate:self.flight.arrDate];
     
     NSMutableString *depTerminalGate = [NSMutableString stringWithString:@""];
     if (self.flight.departureTerminal) {
@@ -112,6 +115,8 @@
     }
     flightObject[@"departureDate"] = self.flight.departureDate;
     flightObject[@"arrivalDate"] = self.flight.arrivalDate;
+    flightObject[@"depDate"] = self.flight.depDate;
+    flightObject[@"arrDate"] = self.flight.arrDate;
     if (self.flight.departureGate) {
         flightObject[@"departureGate"] = self.flight.departureGate;
     }

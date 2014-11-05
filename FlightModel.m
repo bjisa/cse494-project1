@@ -20,14 +20,22 @@
         self.origin = dict[@"departureAirportFsCode"];
         self.destination = dict[@"arrivalAirportFsCode"];
         
+        NSDateFormatter *df = [[NSDateFormatter alloc] init];
+        // ex date: 2014-11-05T12:15:00.000
+        [df setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'.000'"];
+        
         NSDictionary *depDate = dict[@"departureDate"];
         if (depDate) {
             self.departureDate = depDate[@"dateLocal"];
+            NSDate *myDate = [df dateFromString:self.departureDate];
+            self.depDate = myDate;
         }
         
         NSDictionary *arrDate = dict[@"arrivalDate"];
         if (arrDate) {
             self.arrivalDate = arrDate[@"dateLocal"];
+            NSDate *myDate = [df dateFromString:self.arrivalDate];
+            self.arrDate = myDate;
         }
         
         NSDictionary *flightDurations = dict[@"flightDurations"];
