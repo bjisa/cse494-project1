@@ -17,8 +17,6 @@
 		95A5BF0E19F8312F000A3F41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95A5BF0D19F8312F000A3F41 /* Images.xcassets */; };
 		95A5BF1119F8312F000A3F41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95A5BF0F19F8312F000A3F41 /* LaunchScreen.xib */; };
 		95A5BF1D19F83130000A3F41 /* FlyWhizzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF1C19F83130000A3F41 /* FlyWhizzTests.m */; };
-		95DBF70519F84A440009D432 /* AirlinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DBF70419F84A440009D432 /* AirlinesViewController.m */; };
-		95DBF70819F84A4D0009D432 /* ReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DBF70719F84A4D0009D432 /* ReviewsViewController.m */; };
 		E1B3925A1A01B41E00055144 /* FlightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B392591A01B41E00055144 /* FlightDetailViewController.m */; };
 		E1B3925D1A01E85900055144 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B3925B1A01E85900055144 /* Bolts.framework */; };
 		E1B3925E1A01E85900055144 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B3925C1A01E85900055144 /* Parse.framework */; };
@@ -90,10 +88,6 @@
 		95A5BF1619F83130000A3F41 /* FlyWhizzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyWhizzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A5BF1B19F83130000A3F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95A5BF1C19F83130000A3F41 /* FlyWhizzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyWhizzTests.m; sourceTree = "<group>"; };
-		95DBF70319F84A440009D432 /* AirlinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirlinesViewController.h; sourceTree = "<group>"; };
-		95DBF70419F84A440009D432 /* AirlinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirlinesViewController.m; sourceTree = "<group>"; };
-		95DBF70619F84A4D0009D432 /* ReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsViewController.h; sourceTree = "<group>"; };
-		95DBF70719F84A4D0009D432 /* ReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsViewController.m; sourceTree = "<group>"; };
 		E1B392581A01B41E00055144 /* FlightDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightDetailViewController.h; sourceTree = "<group>"; };
 		E1B392591A01B41E00055144 /* FlightDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightDetailViewController.m; sourceTree = "<group>"; };
 		E1B3925B1A01E85900055144 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -208,10 +202,6 @@
 				95A5BF0819F8312F000A3F41 /* PlanesViewController.m */,
 				E508659619F8489F00584125 /* ViewControllers */,
 				95A5BF0A19F8312F000A3F41 /* Main.storyboard */,
-				95DBF70319F84A440009D432 /* AirlinesViewController.h */,
-				95DBF70419F84A440009D432 /* AirlinesViewController.m */,
-				95DBF70619F84A4D0009D432 /* ReviewsViewController.h */,
-				95DBF70719F84A4D0009D432 /* ReviewsViewController.m */,
 				95A5BF0D19F8312F000A3F41 /* Images.xcassets */,
 				95A5BF0F19F8312F000A3F41 /* LaunchScreen.xib */,
 				95A5BEFD19F8312F000A3F41 /* Supporting Files */,
@@ -429,9 +419,7 @@
 			files = (
 				E508659519F8489400584125 /* Constants.m in Sources */,
 				95A5BF0319F8312F000A3F41 /* AppDelegate.m in Sources */,
-				95DBF70819F84A4D0009D432 /* ReviewsViewController.m in Sources */,
 				E1B3927F1A06E39600055144 /* AirportModel.m in Sources */,
-				95DBF70519F84A440009D432 /* AirlinesViewController.m in Sources */,
 				E1B3927C1A06DC2500055144 /* MBProgressHUD.m in Sources */,
 				95A5BE2D1A01855300B22192 /* SearchResultsTableViewController.m in Sources */,
 				E1B392821A06ED3900055144 /* AirlineModel.m in Sources */,
