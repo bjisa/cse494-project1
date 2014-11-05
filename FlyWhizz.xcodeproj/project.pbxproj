@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95906B031A0ADA2F00C8DA52 /* TrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95906B021A0ADA2F00C8DA52 /* TrackViewController.m */; };
 		95995E4B19FEF91E000B4052 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95995E4A19FEF91E000B4052 /* SearchViewController.m */; };
 		95A5BE2D1A01855300B22192 /* SearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BE2C1A01855300B22192 /* SearchResultsTableViewController.m */; };
 		95A5BE301A019A2400B22192 /* FlightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BE2E1A019A2400B22192 /* FlightModel.m */; };
@@ -67,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		95906B011A0ADA2F00C8DA52 /* TrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackViewController.h; sourceTree = "<group>"; };
+		95906B021A0ADA2F00C8DA52 /* TrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackViewController.m; sourceTree = "<group>"; };
 		95995E4919FEF91E000B4052 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		95995E4A19FEF91E000B4052 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		95A5BE2B1A01855300B22192 /* SearchResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewController.h; sourceTree = "<group>"; };
@@ -293,6 +296,8 @@
 		E508659619F8489F00584125 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				95906B011A0ADA2F00C8DA52 /* TrackViewController.h */,
+				95906B021A0ADA2F00C8DA52 /* TrackViewController.m */,
 				95A5BE2B1A01855300B22192 /* SearchResultsTableViewController.h */,
 				95A5BE2C1A01855300B22192 /* SearchResultsTableViewController.m */,
 				95995E4919FEF91E000B4052 /* SearchViewController.h */,
@@ -427,6 +432,7 @@
 				95A5BE301A019A2400B22192 /* FlightModel.m in Sources */,
 				95A5BF0619F8312F000A3F41 /* FlightsViewController.m in Sources */,
 				95A5BF0019F8312F000A3F41 /* main.m in Sources */,
+				95906B031A0ADA2F00C8DA52 /* TrackViewController.m in Sources */,
 				E1B392AA1A0AC9C100055144 /* PlanesDetailViewController.m in Sources */,
 				95995E4B19FEF91E000B4052 /* SearchViewController.m in Sources */,
 			);
