@@ -32,9 +32,18 @@
     self.flightModels = [[NSMutableArray alloc] init];
     self.flightParseObjects = [[NSMutableArray alloc] init];
     self.flightIDs = [[NSMutableArray alloc] init];
+    
+    self.tableView.allowsMultipleSelectionDuringEditing = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [self loadTableViewData];
+}
+
+- (void)loadTableViewData {
+    [self.flightModels removeAllObjects];
+    [self.flightParseObjects removeAllObjects];
+    
     [self loadChecklistItems];
     NSLog(@"Saved Flights ID List in FlightsViewController:%@", self.flightIDs);
     
@@ -52,7 +61,6 @@
             [self.flightParseObjects addObject:savedFlight];
         }
     }
-    NSLog(@"Flight models retrieved: %@", self.flightParseObjects);
     
     for (PFObject *flight in self.flightParseObjects) {
         // Use flightIDs to get saved flight details from Parse.
@@ -81,13 +89,13 @@
         flightModel.originAirportName = flight[@"originAirportName"];
         
         [self.flightModels addObject:flightModel];
+        
+        NSLog(@"flightIds: %@", self.flightIDs);
     }
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
     [self saveChecklistItems];
-    [self.flightModels removeAllObjects];
-    [self.flightParseObjects removeAllObjects];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -102,6 +110,13 @@
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         destination.flight = self.flightModels[indexPath.row];
     }
+}
+
+- (void)deleteSavedFlight:(NSInteger)index {
+    [self.flightIDs removeObjectAtIndex:index];
+    [self saveChecklistItems];
+    [self loadTableViewData];
+    [self.tableView reloadData];
 }
 
 #pragma mark - TableViewDelegation
@@ -141,6 +156,18 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"SavedFlights" sender:self];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    return YES;
+}
+
+// Override to support swipe to delete.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self deleteSavedFlight:indexPath.row];
+    }
 }
 
 #pragma mark - NSCoding
