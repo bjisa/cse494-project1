@@ -41,9 +41,7 @@
     
     //self.savedFlights = [SavedFlights savedFlights];
     self.flightIDs = [[NSMutableArray alloc] init];
-    NSLog(@"before load %@", self.flightIDs);
     [self loadChecklistItems];
-    NSLog(@"after load %@", self.flightIDs);
     
     self.flightDetailLabel.text = [NSString stringWithFormat:@"%@ %@", self.flight.airlineName, self.flight.flightNumber];
     
@@ -84,20 +82,14 @@
     }
     self.originGateLabel.text = arrTerminalGate;
     
-    if (self.flight.iataCode) {
-        self.planeModelLabel.text = [NSString stringWithFormat:@"%@", self.flight.iataCode];
-    }
-    
     self.delayLabel.text = [NSString stringWithFormat:@"%d minutes", self.flight.delay];
     
     NSString *planeModel = @"Plane type unknown";
     if (self.flight.iataCode) {
         planeModel = self.flight.iataCode;
-    }
+     }
     self.planeModelLabel.text = planeModel;
 
-    
-    NSLog(@"In Detail View: Origin Airport Name: %@", self.flight.originAirportName);
     self.originAirportLabel.text = self.flight.originAirportName;
     self.originLocationLabel.text = [NSString stringWithFormat:@"%@, %@", self.flight.originCity, self.flight.originState];
     
@@ -108,7 +100,6 @@
 - (void) viewWillDisappear:(BOOL)animated {
     // Save savedFlights here.
     [self saveChecklistItems];
-    NSLog(@"Flights saved");
 }
 
 - (IBAction)saveFlightButton:(id)sender {
@@ -155,7 +146,6 @@
         NSLog(@"%@", flightObject.objectId);
         // Save the object ID of this flight object in order to retrieve it from Parse later.
         [self.flightIDs addObject:flightObject.objectId];
-        NSLog(@"FlightIDs in Detail View: %@", self.flightIDs);
     }];
      
      // Show message that flight was saved to favorites.
@@ -211,9 +201,7 @@
         NSData *data = [[NSData alloc] initWithContentsOfFile:path];
         NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
         
-        NSLog(@"Before decode %@", self.flightIDs);
         self.flightIDs = [unarchiver decodeObjectForKey:@"savedFlights"];
-        NSLog(@"After decode %@", self.flightIDs);
         
         // Won't actually decode until here.
         [unarchiver finishDecoding];

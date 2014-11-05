@@ -45,7 +45,7 @@
         
         NSDictionary *flightEquipment = dict[@"flightEquipment"];
         if (flightEquipment) {
-            self.iataCode = dict[@"scheduledEquipmentIataCode"];
+            self.iataCode = flightEquipment[@"scheduledEquipmentIataCode"];
         }
         
         NSDictionary *delays = dict[@"delays"];

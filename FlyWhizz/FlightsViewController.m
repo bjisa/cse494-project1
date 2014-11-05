@@ -89,18 +89,11 @@
         flightModel.originAirportName = flight[@"originAirportName"];
         
         [self.flightModels addObject:flightModel];
-        
-        NSLog(@"flightIds: %@", self.flightIDs);
     }
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
     [self saveChecklistItems];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 // Pass the flight model to the FlightDetailViewController.
@@ -159,7 +152,6 @@
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return YES if you want the specified item to be editable.
     return YES;
 }
 
