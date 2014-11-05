@@ -170,6 +170,8 @@
     if ([segue.identifier isEqualToString:@"Track"]) {
         TrackViewController *destination = segue.destinationViewController;
         destination.flightID = self.flight.flightID;
+        destination.flightStatus = self.flight.status;
+        
     }
 }
 

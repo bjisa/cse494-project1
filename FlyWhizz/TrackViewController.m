@@ -26,8 +26,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self addFlightPath:@"hurrdurr" landed:YES];
-    //[self mapFromAddress:@"tempe az" toAddress:@"gilbert az"];
+    [self addFlightPath];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,19 +34,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) addFlightPath:(NSString*)flightId landed:(BOOL)landed {
+- (void) addFlightPath {
     [self.mapView removeAnnotations:self.mapView.annotations];
     
     // API Keys
     NSString *apiAppId = @"2aaf4e79";
     NSString *apiAppKey = @"6aa2d9d9b3dfbd7720e7e1a9cffaaf8d";
     
+    BOOL landed = NO;
+    
     // Flight data needed; these are used for testing
-    landed = NO;
+    if (![self.flightStatus isEqualToString:@"L"]) {
+        landed = YES;
+    }
+    
     
     NSString *apiCall = [NSString stringWithFormat:@"https://api.flightstats.com/flex/flightstatus/rest/v2/json/flight/track/%@?appId=%@&appKey=%@&includeFlightPlan=true&maxPositions=9001", self.flightID, apiAppId, apiAppKey];
-    
-    //NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://api.flightstats.com/flex/flightstatus/rest/v2/json/flight/track/456447408?appId=2aaf4e79&appKey=6aa2d9d9b3dfbd7720e7e1a9cffaaf8d&includeFlightPlan=true&maxPositions=9001"]];
     
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:apiCall]];
     
@@ -57,9 +59,7 @@
     MKMapPoint* mappoints = malloc(sizeof(MKMapPoint) * waypoints.count);
     CLLocationCoordinate2D* pathcoordinates = malloc(sizeof(CLLocationCoordinate2D) * waypoints.count);
 
-    //MKMapPoint mappoint = MKMapPointMake([waypoints[0][@"lon"] doubleValue], [waypoints[0][@"lat"] doubleValue]);
     for (int i = 0; i < waypoints.count; i++) {
-        //mappoints[i] = MKMapPointMake([waypoints[i][@"lat"] doubleValue], [waypoints[i][@"lon"] doubleValue]);
         pathcoordinates[i] = CLLocationCoordinate2DMake([waypoints[i][@"lat"] doubleValue], [waypoints[i][@"lon"] doubleValue]);
         mappoints[i] = MKMapPointForCoordinate(pathcoordinates[i]);
     }

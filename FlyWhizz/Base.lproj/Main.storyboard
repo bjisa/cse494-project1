@@ -206,7 +206,7 @@
             <objects>
                 <viewController id="RyQ-Ff-cSg" customClass="PlanesDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="doo-aN-CAT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="plane" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YuO-jU-Qvw">
@@ -390,9 +390,6 @@
                                 <state key="normal" title="View Plane Details">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="RyQ-Ff-cSg" kind="push" id="RPw-6Q-aZ7"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jw6-G7-a1c">
                                 <rect key="frame" x="109" y="144" width="80" height="30"/>
@@ -560,6 +557,5 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="43N-lc-6JW"/>
-        <segue reference="RPw-6Q-aZ7"/>
     </inferredMetricsTieBreakers>
 </document>

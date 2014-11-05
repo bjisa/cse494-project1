@@ -12,6 +12,7 @@
 @interface TrackViewController : UIViewController <MKMapViewDelegate>
 
 @property NSString *flightID;
+@property NSString *flightStatus;
 
 @end
 
