@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>Airbus A318</string>
+	<string>Airbus A319</string>
+	<string>Airbus A320</string>
+	<string>Airbus A321</string>
+	<string>Boeing 717</string>
+	<string>Boeing 737-600</string>
+	<string>Boeing 737-700</string>
+	<string>Boeing 737-800</string>
+	<string>Boeing 737-900ER</string>
+	<string>Boeing 757-200</string>
+	<string>Boeing 757-300</string>
+</array>
+</plist>

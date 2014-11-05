@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		95906B031A0ADA2F00C8DA52 /* TrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95906B021A0ADA2F00C8DA52 /* TrackViewController.m */; };
+		95906B071A0AE3FD00C8DA52 /* AircraftDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95906B061A0AE3FD00C8DA52 /* AircraftDetailsViewController.m */; };
+		95906B0A1A0AE43200C8DA52 /* AircraftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95906B091A0AE43100C8DA52 /* AircraftModel.m */; };
+		95906B0C1A0AE4DB00C8DA52 /* AircraftList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95906B0B1A0AE4DB00C8DA52 /* AircraftList.plist */; };
 		95995E4B19FEF91E000B4052 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95995E4A19FEF91E000B4052 /* SearchViewController.m */; };
 		95A5BE2D1A01855300B22192 /* SearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BE2C1A01855300B22192 /* SearchResultsTableViewController.m */; };
 		95A5BE301A019A2400B22192 /* FlightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BE2E1A019A2400B22192 /* FlightModel.m */; };
@@ -53,7 +56,6 @@
 		E1B392A31A0AC6E500055144 /* SkyWest Airlines.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B392A21A0AC6E500055144 /* SkyWest Airlines.png */; };
 		E1B392A51A0AC72200055144 /* United Airlines.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B392A41A0AC72200055144 /* United Airlines.png */; };
 		E1B392A71A0AC79800055144 /* Republic Airlines.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1B392A61A0AC79800055144 /* Republic Airlines.jpg */; };
-		E1B392AA1A0AC9C100055144 /* PlanesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B392A91A0AC9C100055144 /* PlanesDetailViewController.m */; };
 		E508659519F8489400584125 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E508659419F8489400584125 /* Constants.m */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,11 @@
 /* Begin PBXFileReference section */
 		95906B011A0ADA2F00C8DA52 /* TrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackViewController.h; sourceTree = "<group>"; };
 		95906B021A0ADA2F00C8DA52 /* TrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackViewController.m; sourceTree = "<group>"; };
+		95906B051A0AE3FD00C8DA52 /* AircraftDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AircraftDetailsViewController.h; sourceTree = "<group>"; };
+		95906B061A0AE3FD00C8DA52 /* AircraftDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AircraftDetailsViewController.m; sourceTree = "<group>"; };
+		95906B081A0AE43100C8DA52 /* AircraftModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AircraftModel.h; sourceTree = "<group>"; };
+		95906B091A0AE43100C8DA52 /* AircraftModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AircraftModel.m; sourceTree = "<group>"; };
+		95906B0B1A0AE4DB00C8DA52 /* AircraftList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AircraftList.plist; sourceTree = "<group>"; };
 		95995E4919FEF91E000B4052 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		95995E4A19FEF91E000B4052 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		95A5BE2B1A01855300B22192 /* SearchResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewController.h; sourceTree = "<group>"; };
@@ -130,8 +137,6 @@
 		E1B392A21A0AC6E500055144 /* SkyWest Airlines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SkyWest Airlines.png"; sourceTree = "<group>"; };
 		E1B392A41A0AC72200055144 /* United Airlines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "United Airlines.png"; sourceTree = "<group>"; };
 		E1B392A61A0AC79800055144 /* Republic Airlines.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Republic Airlines.jpg"; sourceTree = "<group>"; };
-		E1B392A81A0AC9C100055144 /* PlanesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanesDetailViewController.h; sourceTree = "<group>"; };
-		E1B392A91A0AC9C100055144 /* PlanesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanesDetailViewController.m; sourceTree = "<group>"; };
 		E508659319F8489400584125 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		E508659419F8489400584125 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +174,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		95906B041A0AE3BF00C8DA52 /* Aircraft ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				95906B051A0AE3FD00C8DA52 /* AircraftDetailsViewController.h */,
+				95906B061A0AE3FD00C8DA52 /* AircraftDetailsViewController.m */,
+			);
+			name = "Aircraft ViewControllers";
+			sourceTree = "<group>";
+		};
 		95A5BEF119F8312F000A3F41 = {
 			isa = PBXGroup;
 			children = (
@@ -197,8 +211,6 @@
 				E1B3927B1A06DC2500055144 /* MBProgressHUD.m */,
 				E1B392581A01B41E00055144 /* FlightDetailViewController.h */,
 				E1B392591A01B41E00055144 /* FlightDetailViewController.m */,
-				E1B392A81A0AC9C100055144 /* PlanesDetailViewController.h */,
-				E1B392A91A0AC9C100055144 /* PlanesDetailViewController.m */,
 				95A5BF0419F8312F000A3F41 /* FlightsViewController.h */,
 				95A5BF0519F8312F000A3F41 /* FlightsViewController.m */,
 				95A5BF0719F8312F000A3F41 /* PlanesViewController.h */,
@@ -216,6 +228,7 @@
 		95A5BEFD19F8312F000A3F41 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				95906B0B1A0AE4DB00C8DA52 /* AircraftList.plist */,
 				E1B392A01A0AC5DB00055144 /* US Airways.png */,
 				E1B392861A0AC54F00055144 /* Air Canada rouge.png */,
 				E1B392871A0AC54F00055144 /* Alaska Airlines.png */,
@@ -280,6 +293,8 @@
 		E508659219F8485800584125 /* FlyWhizz Models */ = {
 			isa = PBXGroup;
 			children = (
+				95906B081A0AE43100C8DA52 /* AircraftModel.h */,
+				95906B091A0AE43100C8DA52 /* AircraftModel.m */,
 				95A5BE2E1A019A2400B22192 /* FlightModel.m */,
 				95A5BE2F1A019A2400B22192 /* FlightModel.h */,
 				E508659319F8489400584125 /* Constants.h */,
@@ -296,6 +311,7 @@
 		E508659619F8489F00584125 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				95906B041A0AE3BF00C8DA52 /* Aircraft ViewControllers */,
 				95906B011A0ADA2F00C8DA52 /* TrackViewController.h */,
 				95906B021A0ADA2F00C8DA52 /* TrackViewController.m */,
 				95A5BE2B1A01855300B22192 /* SearchResultsTableViewController.h */,
@@ -386,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95906B0C1A0AE4DB00C8DA52 /* AircraftList.plist in Resources */,
 				E1B3929B1A0AC54F00055144 /* Spirit Airlines.png in Resources */,
 				E1B392A11A0AC5DB00055144 /* US Airways.png in Resources */,
 				E1B392941A0AC54F00055144 /* Alaska Airlines.png in Resources */,
@@ -427,13 +444,14 @@
 				E1B3927F1A06E39600055144 /* AirportModel.m in Sources */,
 				E1B3927C1A06DC2500055144 /* MBProgressHUD.m in Sources */,
 				95A5BE2D1A01855300B22192 /* SearchResultsTableViewController.m in Sources */,
+				95906B071A0AE3FD00C8DA52 /* AircraftDetailsViewController.m in Sources */,
 				E1B392821A06ED3900055144 /* AirlineModel.m in Sources */,
 				E1B3925A1A01B41E00055144 /* FlightDetailViewController.m in Sources */,
 				95A5BE301A019A2400B22192 /* FlightModel.m in Sources */,
 				95A5BF0619F8312F000A3F41 /* FlightsViewController.m in Sources */,
 				95A5BF0019F8312F000A3F41 /* main.m in Sources */,
 				95906B031A0ADA2F00C8DA52 /* TrackViewController.m in Sources */,
-				E1B392AA1A0AC9C100055144 /* PlanesDetailViewController.m in Sources */,
+				95906B0A1A0AE43200C8DA52 /* AircraftModel.m in Sources */,
 				95995E4B19FEF91E000B4052 /* SearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

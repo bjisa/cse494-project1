@@ -9,8 +9,8 @@
 #import "AirportModel.h"
 #import "FlightDetailViewController.h"
 #import "MBProgressHUD.h"
-#import "PlanesDetailViewController.h"
 #import "TrackViewController.h"
+#import "AircraftDetailsViewController.h"
 
 @interface FlightDetailViewController()
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
@@ -164,8 +164,8 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"PlaneInfo"]) {
-        PlanesDetailViewController *destination = segue.destinationViewController;
-        destination.iataCode = self.flight.iataCode;
+        AircraftDetailsViewController *destination = segue.destinationViewController;
+        destination.aircraftName = self.flight.iataCode;
     }
     if ([segue.identifier isEqualToString:@"Track"]) {
         TrackViewController *destination = segue.destinationViewController;
