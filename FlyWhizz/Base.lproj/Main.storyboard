@@ -438,7 +438,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Planes" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Planes" image="airplane" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -467,7 +467,7 @@
         <scene sceneID="pkj-8S-PSA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T5T-fi-kBn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Flights" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Flights" image="airplane_takeoff" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="onD-gl-TyS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -484,8 +484,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="airplane" width="30" height="30"/>
+        <image name="airplane_takeoff" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
