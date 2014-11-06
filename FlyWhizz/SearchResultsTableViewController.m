@@ -58,7 +58,7 @@
     
     if ([self.searchType isEqualToString:@"byOriginDestination"])
     {
-        queryString = [NSString stringWithFormat:@"%@route/status/%@/%@/arr/%d/%d/%d?appId=%@&appKey=%@&utc=false&maxFlights=5",kBaseURL, self.originCode, self.destinationCode, year, month, day, apiID, apiKey];
+        queryString = [NSString stringWithFormat:@"%@route/status/%@/%@/arr/%d/%d/%d?appId=%@&appKey=%@&utc=false&maxFlights=15",kBaseURL, self.originCode, self.destinationCode, year, month, day, apiID, apiKey];
     }
     else // Search by Flight Number
     {
