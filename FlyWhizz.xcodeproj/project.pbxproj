@@ -173,15 +173,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		95906B041A0AE3BF00C8DA52 /* Aircraft ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				95906B051A0AE3FD00C8DA52 /* AircraftDetailsViewController.h */,
-				95906B061A0AE3FD00C8DA52 /* AircraftDetailsViewController.m */,
-			);
-			name = "Aircraft ViewControllers";
-			sourceTree = "<group>";
-		};
 		95A5BEF119F8312F000A3F41 = {
 			isa = PBXGroup;
 			children = (
@@ -208,10 +199,6 @@
 				95A5BF0219F8312F000A3F41 /* AppDelegate.m */,
 				E1B3927A1A06DC2500055144 /* MBProgressHUD.h */,
 				E1B3927B1A06DC2500055144 /* MBProgressHUD.m */,
-				E1B392581A01B41E00055144 /* FlightDetailViewController.h */,
-				E1B392591A01B41E00055144 /* FlightDetailViewController.m */,
-				95A5BF0419F8312F000A3F41 /* FlightsViewController.h */,
-				95A5BF0519F8312F000A3F41 /* FlightsViewController.m */,
 				E508659619F8489F00584125 /* ViewControllers */,
 				95A5BF0A19F8312F000A3F41 /* Main.storyboard */,
 				95A5BF0D19F8312F000A3F41 /* Images.xcassets */,
@@ -307,9 +294,14 @@
 		E508659619F8489F00584125 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E1B392581A01B41E00055144 /* FlightDetailViewController.h */,
+				E1B392591A01B41E00055144 /* FlightDetailViewController.m */,
+				95A5BF0419F8312F000A3F41 /* FlightsViewController.h */,
+				95A5BF0519F8312F000A3F41 /* FlightsViewController.m */,
+				95906B051A0AE3FD00C8DA52 /* AircraftDetailsViewController.h */,
+				95906B061A0AE3FD00C8DA52 /* AircraftDetailsViewController.m */,
 				95298D491A0AF4AE00E300E8 /* SelectAircraftViewController.h */,
 				95298D4A1A0AF4AE00E300E8 /* SelectAircraftViewController.m */,
-				95906B041A0AE3BF00C8DA52 /* Aircraft ViewControllers */,
 				95906B011A0ADA2F00C8DA52 /* TrackViewController.h */,
 				95906B021A0ADA2F00C8DA52 /* TrackViewController.m */,
 				95A5BE2B1A01855300B22192 /* SearchResultsTableViewController.h */,

@@ -13,6 +13,7 @@
 @interface FlightsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *savedFlightsTableView;
+@property NSInteger selectedIndexPathRow;
 
 @property NSMutableArray *flightModels;
 @property NSMutableArray *flightParseObjects;
@@ -29,6 +30,7 @@
     self.flightModels = [[NSMutableArray alloc] init];
     self.flightParseObjects = [[NSMutableArray alloc] init];
     self.flightIDs = [[NSMutableArray alloc] init];
+    self.selectedIndexPathRow = 0;
     
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
 }
@@ -93,14 +95,19 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
     if ([segue.identifier isEqualToString:@"SavedFlights"]) {
+        
         FlightDetailViewController *destination = segue.destinationViewController;
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-        destination.flight = self.flightModels[indexPath.row];
+        
+        destination.flight = self.flightModels[self.selectedIndexPathRow];
+        
     }
+    
 }
 
 - (void)deleteSavedFlight:(NSInteger)index {
+    
     [self.flightIDs removeObjectAtIndex:index];
     [self saveChecklistItems];
     [self loadTableViewData];
@@ -145,7 +152,11 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    self.selectedIndexPathRow = indexPath.row;
+    
     [self performSegueWithIdentifier:@"SavedFlights" sender:self];
+    
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
