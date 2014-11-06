@@ -166,6 +166,7 @@
     if ([segue.identifier isEqualToString:@"PlaneInfo"]) {
         AircraftDetailsViewController *destination = segue.destinationViewController;
         destination.aircraftName = self.flight.iataCode;
+        destination.nameNeedsProcessing = YES;
     }
     if ([segue.identifier isEqualToString:@"Track"]) {
         TrackViewController *destination = segue.destinationViewController;

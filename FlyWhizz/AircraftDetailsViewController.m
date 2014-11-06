@@ -10,7 +10,6 @@
 
 @interface AircraftDetailsViewController ()
 
-//@property NSXMLParser *parser;
 @property AircraftModel *aircraftModel;
 @property NSString *aircraft4DigitID;
 
@@ -26,12 +25,14 @@
     // Do any additional setup after loading the view.
     
     NSLog(@"Inside ViewDidLoad");
-    
+        
     // Get the aircraft name
     //NSUserDefaults *prefs = [[NSUserDefaults alloc] init];
     //self.aircraftName = [prefs objectForKey:@"AIRCRAFT_NAME_KEY"];
 
-    self.aircraftName = [self aircraftIATAtoFullName];
+    if (self.nameNeedsProcessing) {
+        self.aircraftName = [self aircraftIATAtoFullName];
+    }
     
     NSLog(@"Aircraft name = '%@'", self.aircraftName);
 
@@ -704,7 +705,6 @@
     [prefs setObject:self.aircraft4DigitID forKey:@"AIRCRAFT_4_DIGIT_ID_KEY"];
     NSLog(@"4 digit aircraft ID = '%@'", self.aircraft4DigitID);
 }
-
 
 - (void) didReceiveMemoryWarning
 {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95298D4B1A0AF4AE00E300E8 /* SelectAircraftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95298D4A1A0AF4AE00E300E8 /* SelectAircraftViewController.m */; };
 		95906B031A0ADA2F00C8DA52 /* TrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95906B021A0ADA2F00C8DA52 /* TrackViewController.m */; };
 		95906B071A0AE3FD00C8DA52 /* AircraftDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95906B061A0AE3FD00C8DA52 /* AircraftDetailsViewController.m */; };
 		95906B0A1A0AE43200C8DA52 /* AircraftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95906B091A0AE43100C8DA52 /* AircraftModel.m */; };
@@ -19,7 +20,6 @@
 		95A5BF0619F8312F000A3F41 /* FlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF0519F8312F000A3F41 /* FlightsViewController.m */; };
 		95A5BF0C19F8312F000A3F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A5BF0A19F8312F000A3F41 /* Main.storyboard */; };
 		95A5BF0E19F8312F000A3F41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95A5BF0D19F8312F000A3F41 /* Images.xcassets */; };
-		95A5BF1119F8312F000A3F41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95A5BF0F19F8312F000A3F41 /* LaunchScreen.xib */; };
 		95A5BF1D19F83130000A3F41 /* FlyWhizzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5BF1C19F83130000A3F41 /* FlyWhizzTests.m */; };
 		E1B3925A1A01B41E00055144 /* FlightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B392591A01B41E00055144 /* FlightDetailViewController.m */; };
 		E1B3925D1A01E85900055144 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B3925B1A01E85900055144 /* Bolts.framework */; };
@@ -70,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		95298D491A0AF4AE00E300E8 /* SelectAircraftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAircraftViewController.h; sourceTree = "<group>"; };
+		95298D4A1A0AF4AE00E300E8 /* SelectAircraftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectAircraftViewController.m; sourceTree = "<group>"; };
 		95906B011A0ADA2F00C8DA52 /* TrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackViewController.h; sourceTree = "<group>"; };
 		95906B021A0ADA2F00C8DA52 /* TrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackViewController.m; sourceTree = "<group>"; };
 		95906B051A0AE3FD00C8DA52 /* AircraftDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AircraftDetailsViewController.h; sourceTree = "<group>"; };
@@ -90,11 +92,8 @@
 		95A5BF0219F8312F000A3F41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		95A5BF0419F8312F000A3F41 /* FlightsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlightsViewController.h; sourceTree = "<group>"; };
 		95A5BF0519F8312F000A3F41 /* FlightsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlightsViewController.m; sourceTree = "<group>"; };
-		95A5BF0719F8312F000A3F41 /* PlanesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanesViewController.h; sourceTree = "<group>"; };
-		95A5BF0819F8312F000A3F41 /* PlanesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanesViewController.m; sourceTree = "<group>"; };
 		95A5BF0B19F8312F000A3F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95A5BF0D19F8312F000A3F41 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		95A5BF1019F8312F000A3F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		95A5BF1619F83130000A3F41 /* FlyWhizzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyWhizzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A5BF1B19F83130000A3F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95A5BF1C19F83130000A3F41 /* FlyWhizzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyWhizzTests.m; sourceTree = "<group>"; };
@@ -213,12 +212,9 @@
 				E1B392591A01B41E00055144 /* FlightDetailViewController.m */,
 				95A5BF0419F8312F000A3F41 /* FlightsViewController.h */,
 				95A5BF0519F8312F000A3F41 /* FlightsViewController.m */,
-				95A5BF0719F8312F000A3F41 /* PlanesViewController.h */,
-				95A5BF0819F8312F000A3F41 /* PlanesViewController.m */,
 				E508659619F8489F00584125 /* ViewControllers */,
 				95A5BF0A19F8312F000A3F41 /* Main.storyboard */,
 				95A5BF0D19F8312F000A3F41 /* Images.xcassets */,
-				95A5BF0F19F8312F000A3F41 /* LaunchScreen.xib */,
 				95A5BEFD19F8312F000A3F41 /* Supporting Files */,
 				E508659219F8485800584125 /* FlyWhizz Models */,
 			);
@@ -311,6 +307,8 @@
 		E508659619F8489F00584125 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				95298D491A0AF4AE00E300E8 /* SelectAircraftViewController.h */,
+				95298D4A1A0AF4AE00E300E8 /* SelectAircraftViewController.m */,
 				95906B041A0AE3BF00C8DA52 /* Aircraft ViewControllers */,
 				95906B011A0ADA2F00C8DA52 /* TrackViewController.h */,
 				95906B021A0ADA2F00C8DA52 /* TrackViewController.m */,
@@ -415,7 +413,6 @@
 				E1B392A51A0AC72200055144 /* United Airlines.png in Resources */,
 				E1B392961A0AC54F00055144 /* American Airlines.png in Resources */,
 				E1B3929A1A0AC54F00055144 /* Southwest Airlines.png in Resources */,
-				95A5BF1119F8312F000A3F41 /* LaunchScreen.xib in Resources */,
 				E1B392971A0AC54F00055144 /* Delta Air Lines.png in Resources */,
 				E1B3929C1A0AC54F00055144 /* Sun Country Airlines.png in Resources */,
 				E1B392991A0AC54F00055144 /* JetBlue Airways.png in Resources */,
@@ -446,6 +443,7 @@
 				95A5BE2D1A01855300B22192 /* SearchResultsTableViewController.m in Sources */,
 				95906B071A0AE3FD00C8DA52 /* AircraftDetailsViewController.m in Sources */,
 				E1B392821A06ED3900055144 /* AirlineModel.m in Sources */,
+				95298D4B1A0AF4AE00E300E8 /* SelectAircraftViewController.m in Sources */,
 				E1B3925A1A01B41E00055144 /* FlightDetailViewController.m in Sources */,
 				95A5BE301A019A2400B22192 /* FlightModel.m in Sources */,
 				95A5BF0619F8312F000A3F41 /* FlightsViewController.m in Sources */,
@@ -481,14 +479,6 @@
 				95A5BF0B19F8312F000A3F41 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		95A5BF0F19F8312F000A3F41 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				95A5BF1019F8312F000A3F41 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -574,6 +564,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -588,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
