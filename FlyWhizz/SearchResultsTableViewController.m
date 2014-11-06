@@ -43,8 +43,9 @@
     if ([self.dateSelection isEqualToString:@"Tomorrow"])
     {
         // Get date for tomorrow
-        //int incrementBy = 1;
-        //NSDate * theDate = [[NSDate alloc] initWithTimeIntervalSinceNow:60 * 60 * 24 * incrementBy];
+        int incrementBy = 1;
+        NSDate * tomorrowDate = [[NSDate alloc] initWithTimeIntervalSinceNow:60 * 60 * 24 * incrementBy];
+        theDate = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:tomorrowDate];
     }
     
     int year = (int)theDate.year;
