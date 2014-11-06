@@ -28,7 +28,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *arrivalTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *delayLabel;
 
-//@property SavedFlights *savedFlights;
 @property NSMutableArray *flightIDs;
 
 - (IBAction)saveFlightButton:(id)sender;
@@ -40,7 +39,6 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
     
-    //self.savedFlights = [SavedFlights savedFlights];
     self.flightIDs = [[NSMutableArray alloc] init];
     [self loadChecklistItems];
     
@@ -48,11 +46,23 @@
     
     NSString *status = @"Status unknown";
     if ([self.flight.status isEqualToString:@"A"]) {
-        status = @"Arrived";
+        status = @"Active";
+    } else if ([self.flight.status isEqualToString:@"C"]) {
+        status = @"Canceled";
+    } else if ([self.flight.status isEqualToString:@"D"]) {
+        status = @"Diverted";
+    } else if ([self.flight.status isEqualToString:@"DN"]) {
+        status = @"Data Source Needed";
     } else if ([self.flight.status isEqualToString:@"L"]) {
         status = @"Landed";
+    } else if ([self.flight.status isEqualToString:@"NO"]) {
+        status = @"Not Operational";
+    } else if ([self.flight.status isEqualToString:@"R"]) {
+        status = @"Redirected";
     } else if ([self.flight.status isEqualToString:@"S"]) {
         status = @"Scheduled";
+    } else if ([self.flight.status isEqualToString:@"U"]) {
+        status = @"Unknown";
     }
     self.statusLabel.text = status;
     self.routeLabel.text = [NSString stringWithFormat:@"%@ --> %@", self.flight.origin, self.flight.destination];

@@ -1,5 +1,5 @@
 //
-//  FirstViewController.m
+//  FlightsViewController.m
 //  FlyWhizz
 //
 //  Created by Ben Jisa on 10/22/14.
@@ -70,17 +70,13 @@
     [self.flightParseObjects removeAllObjects];
     
     [self loadChecklistItems];
-    NSLog(@"Saved Flights ID List in FlightsViewController:%@", self.flightIDs);
     
     PFQuery *query = [PFQuery queryWithClassName:@"SavedFlight"];
     
     for (NSString *savedID in self.flightIDs) {
-        NSLog(@"ID outside: %@", savedID);
         // Only try to read from Parse if ID is not null
         if (![savedID isEqualToString:@"(null)"]) {
-            NSLog(@"ID inside: %@", savedID);
             PFObject *savedFlight = [query getObjectWithId:savedID];
-            NSLog(@"%@", savedFlight);
             [self.flightParseObjects addObject:savedFlight];
         }
     }
@@ -121,15 +117,10 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
     if ([segue.identifier isEqualToString:@"SavedFlights"]) {
-        
         FlightDetailViewController *destination = segue.destinationViewController;
-        
         destination.flight = self.flightModels[self.selectedIndexPathRow];
-        
     }
-    
 }
 
 - (void)deleteSavedFlight:(NSInteger)index {
@@ -179,11 +170,8 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     self.selectedIndexPathRow = indexPath.row;
-    
     [self performSegueWithIdentifier:@"SavedFlights" sender:self];
-    
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

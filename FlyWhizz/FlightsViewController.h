@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  FlightsViewController.h
 //  FlyWhizz
 //
 //  Created by Ben Jisa on 10/22/14.
