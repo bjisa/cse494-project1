@@ -41,11 +41,11 @@
     NSString *apiAppId = @"2aaf4e79";
     NSString *apiAppKey = @"6aa2d9d9b3dfbd7720e7e1a9cffaaf8d";
     
-    BOOL landed = NO;
+    BOOL landed = YES;
     
     // Flight data needed; these are used for testing
     if (![self.flightStatus isEqualToString:@"L"]) {
-        landed = YES;
+        landed = NO;
     }
     
     
@@ -87,7 +87,7 @@
     
     if (!landed) {
     MKPointAnnotation *currentLocAnnotation = [[MKPointAnnotation alloc] init];
-        currentLocAnnotation.coordinate = pathcoordinates[waypoints.count - 1];
+        currentLocAnnotation.coordinate = pathcoordinates[0];
         currentLocAnnotation.title = @"Current Location";
         [self.mapView addAnnotation:currentLocAnnotation];
     }
