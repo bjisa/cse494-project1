@@ -12,10 +12,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="M5r-WW-XwD">
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vny-qt-QVP">
                                 <rect key="frame" x="64" y="70" width="192" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -59,34 +55,24 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="wIA-rE-WWK"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2W3-dT-x25">
+                                <rect key="frame" x="254" y="541" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Saved Flights" id="gun-ML-db5"/>
                     <connections>
                         <outlet property="savedFlightsTableView" destination="uQd-DF-cmD" id="rNF-JW-5fh"/>
-                        <outlet property="searchDisplayController" destination="jK4-24-eUg" id="O59-jw-mjB"/>
                         <outlet property="tableView" destination="uQd-DF-cmD" id="tTn-Ov-3ij"/>
                         <segue destination="zDM-Tm-SqK" kind="push" identifier="SavedFlights" id="43N-lc-6JW"/>
                         <segue destination="oda-hd-2kJ" kind="push" identifier="Search" id="02b-FO-x3n"/>
                     </connections>
                 </viewController>
-                <searchDisplayController id="jK4-24-eUg">
-                    <connections>
-                        <outlet property="delegate" destination="9pv-A4-QxB" id="ndg-7E-lSJ"/>
-                        <outlet property="searchContentsController" destination="9pv-A4-QxB" id="Aaf-S5-F13"/>
-                        <outlet property="searchResultsDataSource" destination="9pv-A4-QxB" id="DiG-mr-7Ab"/>
-                        <outlet property="searchResultsDelegate" destination="9pv-A4-QxB" id="OMg-3h-sfd"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="tl9-rB-Zao">
-                    <connections>
-                        <outlet property="delegate" destination="9pv-A4-QxB" id="Q78-RL-krc"/>
-                        <outlet property="searchContentsController" destination="9pv-A4-QxB" id="KO1-66-SuV"/>
-                        <outlet property="searchResultsDataSource" destination="9pv-A4-QxB" id="QQm-9Z-qdF"/>
-                        <outlet property="searchResultsDelegate" destination="9pv-A4-QxB" id="21O-G0-Hzo"/>
-                    </connections>
-                </searchDisplayController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="889" y="-303"/>

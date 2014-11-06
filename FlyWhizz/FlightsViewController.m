@@ -37,6 +37,32 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [self loadTableViewData];
+    [self.tableView reloadData];
+    [self addMessageForEmptyTable];
+
+}
+
+- (void)addMessageForEmptyTable {
+    // http://www.appcoda.com/pull-to-refresh-uitableview-empty/
+    if (self.flightModels.count == 0) {
+        
+        // Display a message when the table is empty
+        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+        
+        messageLabel.text = @"You have no saved flights.";
+        messageLabel.textColor = [UIColor blackColor];
+        messageLabel.numberOfLines = 0;
+        messageLabel.textAlignment = NSTextAlignmentCenter;
+        [messageLabel sizeToFit];
+        
+        self.tableView.backgroundView = messageLabel;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
+    }
+    else {
+        self.tableView.backgroundView.hidden = YES;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    }
 }
 
 - (void)loadTableViewData {
@@ -112,6 +138,7 @@
     [self saveChecklistItems];
     [self loadTableViewData];
     [self.tableView reloadData];
+    [self addMessageForEmptyTable];
 }
 
 #pragma mark - TableViewDelegation

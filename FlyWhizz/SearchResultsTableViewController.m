@@ -33,6 +33,8 @@
    // dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self getFlightResults];
  //   });
+    
+    [self addMessageForEmptyTable];
 }
 
 -(void) getFlightResults
@@ -136,6 +138,25 @@
     
     return cell;
     
+}
+
+- (void)addMessageForEmptyTable {
+    // http://www.appcoda.com/pull-to-refresh-uitableview-empty/
+    if (self.flights2.count == 0) {
+        
+        // Display a message when the table is empty
+        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+        
+        messageLabel.text = @"No results.";
+        messageLabel.textColor = [UIColor blackColor];
+        messageLabel.numberOfLines = 0;
+        messageLabel.textAlignment = NSTextAlignmentCenter;
+        [messageLabel sizeToFit];
+        
+        self.tableView.backgroundView = messageLabel;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
+    }
 }
 
 @end
