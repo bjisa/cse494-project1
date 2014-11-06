@@ -63,7 +63,7 @@
     self.durationLabel.text = [NSString stringWithFormat:@"%d hr %d min", (int)durHours, (int)durMin];
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"dd/MM/yyyy HH:mm"];
+    [dateFormat setDateFormat:@"MM/dd/yyyy HH:mm"];
     
     self.departureTimeLabel.text = [dateFormat stringFromDate:self.flight.depDate];
     self.arrivalTimeLabel.text = [dateFormat stringFromDate:self.flight.arrDate];
