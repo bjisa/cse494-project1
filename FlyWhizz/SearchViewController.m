@@ -66,18 +66,26 @@
 {
     SearchResultsTableViewController * dest = segue.destinationViewController;
     
+    NSString *inputBox1 = self.input1.text;
+    NSString *inputBox2 = self.input2.text;
+    
     dest.searchType = self.searchType;
     dest.dateSelection = self.dateSelection;
     
+    if ([self.input1.text length] == 0 || [self.input2.text length] == 0) {
+        inputBox1 = @"Error";
+        inputBox2 = @"Error";
+    }
+    
     if ([self.searchType isEqualToString:@"byOriginDestination"])
     {
-        dest.originCode = self.input1.text;
-        dest.destinationCode = self.input2.text;
+        dest.originCode = inputBox1;
+        dest.destinationCode = inputBox2;
     }
     else // Search by Flight Number
     {
-        dest.flightNumber = self.input2.text;
-        dest.carrier = self.input1.text;
+        dest.flightNumber = inputBox2;
+        dest.carrier = inputBox1;
     }
     
 }
