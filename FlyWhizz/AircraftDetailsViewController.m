@@ -28,8 +28,8 @@
     NSLog(@"Inside ViewDidLoad");
     
     // Get the aircraft name
-    NSUserDefaults *prefs = [[NSUserDefaults alloc] init];
-    self.aircraftName = [prefs objectForKey:@"AIRCRAFT_NAME_KEY"];
+    //NSUserDefaults *prefs = [[NSUserDefaults alloc] init];
+    //self.aircraftName = [prefs objectForKey:@"AIRCRAFT_NAME_KEY"];
 
     self.aircraftName = [self aircraftIATAtoFullName];
     
@@ -274,7 +274,7 @@
 - (NSString *) aircraftIATAtoFullName
 {
     // Store the aircraft name in a new string
-    NSString *name = [self.aircraft4DigitID stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *name = [self.aircraftName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if (name.length <= 4)
     {
         // A330

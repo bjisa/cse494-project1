@@ -16,7 +16,6 @@
 // Stores the name of the string that describes the aircraft
 @property NSString *aircraftName;
 
-
 // Aircraft Name and Category Labels
 @property (strong, nonatomic) IBOutlet UILabel *aircraftNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *aircraftCategoryLabel;

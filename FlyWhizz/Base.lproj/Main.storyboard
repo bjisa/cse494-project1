@@ -793,7 +793,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="RyQ-Ff-cSg" kind="push" id="CjX-Ul-CLD"/>
+                                    <segue destination="RyQ-Ff-cSg" kind="push" identifier="PlaneInfo" id="CjX-Ul-CLD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jw6-G7-a1c">
@@ -958,8 +958,8 @@
     <resources>
         <image name="GoldStar" width="1024" height="1024"/>
         <image name="GrayStar" width="1024" height="1024"/>
-        <image name="GreenCheckMark" width="1024" height="1024"/>
-        <image name="RedXMark" width="1024" height="1024"/>
+        <image name="GreenCheckMark" width="300" height="300"/>
+        <image name="RedXMark" width="600" height="600"/>
         <image name="airplane" width="30" height="30"/>
         <image name="airplane_takeoff" width="30" height="30"/>
     </resources>
